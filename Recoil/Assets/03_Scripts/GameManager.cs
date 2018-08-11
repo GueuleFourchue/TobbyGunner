@@ -45,8 +45,6 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator EndLevel()
     {
-        playerData.levelGainedcoins = playerData.coins - beginPlayCoins;
-
         yield return new WaitForSeconds(1);
 
         Scene s = SceneManager.GetSceneByName("GUI");

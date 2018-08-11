@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public ChunksManager chunksManager;
     public GameObject dottedLine;
+    public OutfitsData outfitsData;
 
     [Header("CameraEffects")]
     public Colorful.SmartSaturation saturationEffect;
@@ -76,6 +77,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        //Set outfit
+        string equipedOutfit = PlayerPrefs.GetString("EquipedOutfit");
+        //charaSprite = outfitsData.equipedOutfit;
+        
+
         gunScale = gunSprite.localScale;
         charaScale = charaSprite.localScale;
         UiShield.invulnerabilityTimer = invulnerabilityDuration;
