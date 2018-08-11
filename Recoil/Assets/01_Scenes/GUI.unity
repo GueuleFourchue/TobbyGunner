@@ -283,10 +283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 0
   outline: {fileID: 291553842}
   character: {fileID: 1580479962}
   button: {fileID: 1751179696}
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
+  coinsText: {fileID: 318239730}
 --- !u!114 &291553842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,10 +442,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 1500
   outline: {fileID: 314978698}
   character: {fileID: 807219105}
   button: {fileID: 1829863152}
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
+  coinsText: {fileID: 318239730}
 --- !u!1 &318239728
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,10 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 1900
   outline: {fileID: 434164270}
   character: {fileID: 803885334}
   button: {fileID: 940346753}
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
+  coinsText: {fileID: 318239730}
 --- !u!114 &434164270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,7 +1108,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 38dd844b6f3d7834ba1accc3b7ed9bec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df4e5db03ac57be46a22438eedb6a5c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4342,7 +4348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1500
+  m_Text: 1900
 --- !u!222 &1854256938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4542,10 +4548,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 1900
   outline: {fileID: 1891158881}
   character: {fileID: 580764515}
   button: {fileID: 877618579}
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
+  coinsText: {fileID: 318239730}
 --- !u!114 &1891158881
 MonoBehaviour:
   m_ObjectHideFlags: 0

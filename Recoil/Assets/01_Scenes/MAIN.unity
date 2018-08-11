@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 442810614}
   - component: {fileID: 442810613}
   - component: {fileID: 442810618}
+  - component: {fileID: 442810619}
   m_Layer: 9
   m_Name: Character
   m_TagString: Player
@@ -745,6 +746,7 @@ MonoBehaviour:
   gameManager: {fileID: 1173305984}
   chunksManager: {fileID: 1173305985}
   dottedLine: {fileID: 23877185}
+  outfitsData: {fileID: 0}
   saturationEffect: {fileID: 2009946133}
   motionBlur: {fileID: 2009946134}
   vignette: {fileID: 2009946135}
@@ -801,6 +803,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
   UI: {fileID: 1369804694}
+--- !u!114 &442810619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442810612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c698824a97d2643a495cadb4712cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterVisual: {fileID: 200705226}
+  bartender: {fileID: 21300000, guid: df4e5db03ac57be46a22438eedb6a5c6, type: 3}
+  terminator: {fileID: 21300000, guid: 38dd844b6f3d7834ba1accc3b7ed9bec, type: 3}
+  rambo: {fileID: 21300000, guid: ac60be737dabfc040a022a368562d487, type: 3}
+  mercury: {fileID: 21300000, guid: 1701977a7780a1345b0cc6b5f0375d06, type: 3}
 --- !u!4 &468919453 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4443252872253698, guid: 6943acb554e6f864db420de29d46086f,

@@ -77,11 +77,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //Set outfit
-        string equipedOutfit = PlayerPrefs.GetString("EquipedOutfit");
-        //charaSprite = outfitsData.equipedOutfit;
-        
-
         gunScale = gunSprite.localScale;
         charaScale = charaSprite.localScale;
         UiShield.invulnerabilityTimer = invulnerabilityDuration;

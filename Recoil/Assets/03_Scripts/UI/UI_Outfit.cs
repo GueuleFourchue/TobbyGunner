@@ -6,10 +6,12 @@ using DG.Tweening;
 
 public class UI_Outfit : MonoBehaviour {
 
+    public int price;
     public Image outline;
     public Image character;
     public GameObject button;
     public PlayerData playerData;
+    public Text coinsText;
 
     bool isUnlocked;
 
@@ -41,22 +43,30 @@ public class UI_Outfit : MonoBehaviour {
 
     public void UnlockCostume()
     {
-        isUnlocked = true;
-
-        button.GetComponent<CanvasGroup>().DOFade(0, 0.2f).OnComplete(() =>
+        if (price <= playerData.coins)
         {
-            button.SetActive(false);
-        });
-        character.DOFade(1, 1);
-        character.transform.DOScale(Vector3.one * 1.5f, 1f);
-        character.transform.DOLocalMoveY(-9.7f, 1);
-        outline.DOColor(new Color(0, 169, 150), 1);
+            playerData.coins -= price;
+            coinsText.text = playerData.coins.ToString();
 
-        //Update Player Data
-        if (!playerData.unlockedOutfits.Contains(this.transform.name))
-            playerData.unlockedOutfits.Add(this.transform.name);
-        playerData.equipedOutfit = this.gameObject.name;
-        PlayerPrefs.SetString(this.gameObject.name, this.gameObject.name);
-        PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
+            isUnlocked = true;
+
+            button.GetComponent<CanvasGroup>().DOFade(0, 0.2f).OnComplete(() =>
+            {
+                button.SetActive(false);
+            });
+            character.DOFade(1, 1);
+            character.transform.DOScale(Vector3.one * 1.5f, 1f);
+            character.transform.DOLocalMoveY(-9.7f, 1);
+            outline.DOColor(new Color(0, 169, 150), 1);
+
+            //Update Player Data
+            if (!playerData.unlockedOutfits.Contains(this.transform.name))
+                playerData.unlockedOutfits.Add(this.transform.name);
+            playerData.equipedOutfit = this.gameObject.name;
+            PlayerPrefs.SetString(this.gameObject.name, this.gameObject.name);
+            PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
+        }
+
+        
     }
 }
