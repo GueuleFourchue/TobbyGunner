@@ -21,7 +21,7 @@ public class UI_Outfit : MonoBehaviour {
     {
         if (PlayerPrefs.HasKey(this.gameObject.name))
             CostumesUnlocked();
-	}
+    }
 	
 	void Update ()
     {

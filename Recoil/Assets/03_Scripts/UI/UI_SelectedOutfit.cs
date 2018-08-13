@@ -12,11 +12,14 @@ public class UI_SelectedOutfit : MonoBehaviour {
 
     [HideInInspector]
     public Image currentOutfitOutline;
+    public Dictionary<string, Sprite> outfits = new Dictionary<string, Sprite>();
+
 
     void Start ()
     {
         SetSelectedOutfitOutline();
-	}
+    }
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,6 +34,7 @@ public class UI_SelectedOutfit : MonoBehaviour {
             { 
                 t.GetComponent<Image>().color = selectedOutfitOutlineColor;
                 currentOutfitOutline = t.GetComponent<Image>();
+                StartSetPreviewOutfit(t);
             }
         }
     }
@@ -45,6 +49,12 @@ public class UI_SelectedOutfit : MonoBehaviour {
 
     void ChangeOutfitAnim(Sprite tobbySprite)
     {
+        tobbyPreview.transform.GetComponent<Animator>().enabled = true;
         tobbyPreview.sprite = tobbySprite;
+    }
+
+    public void StartSetPreviewOutfit(Transform visualParent)
+    {
+        tobbyPreview.sprite = visualParent.Find("Visual").GetComponent<Image>().sprite;
     }
 }

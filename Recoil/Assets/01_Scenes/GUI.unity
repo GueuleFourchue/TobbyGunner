@@ -3286,6 +3286,7 @@ GameObject:
   - component: {fileID: 1529597014}
   - component: {fileID: 1529597016}
   - component: {fileID: 1529597015}
+  - component: {fileID: 1529597017}
   m_Layer: 0
   m_Name: Tobby Preview
   m_TagString: Untagged
@@ -3344,6 +3345,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529597013}
+--- !u!95 &1529597017
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529597013}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1983727bb1d12e469a0d5341b784811, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1532762880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,10 +3751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0ef32450a746b459b3106df77d44f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOutfitOutline: {fileID: 0}
   unlockedOutfitOutlineColor: {r: 1, g: 1, b: 1, a: 1}
   selectedOutfitOutlineColor: {r: 0, g: 0.6627451, b: 0.5882353, a: 1}
   tobbyPreview: {fileID: 1529597015}
+  currentOutfitOutline: {fileID: 0}
 --- !u!1 &1751179696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,7 +4654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 150
+  price: 30
   outline: {fileID: 1891158881}
   character: {fileID: 580764515}
   button: {fileID: 877618579}
