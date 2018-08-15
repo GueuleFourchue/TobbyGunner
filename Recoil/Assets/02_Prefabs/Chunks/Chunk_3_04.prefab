@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 50910065951077338}
   - component: {fileID: 114133483774186470}
   - component: {fileID: 58120693849659374}
+  - component: {fileID: 114837985481392202}
   m_Layer: 10
   m_Name: Minion_01 (24)
   m_TagString: Monster
@@ -261,6 +262,7 @@ GameObject:
   - component: {fileID: 50131478430879236}
   - component: {fileID: 114271826005524160}
   - component: {fileID: 58835583734039354}
+  - component: {fileID: 114254374720768176}
   m_Layer: 10
   m_Name: Minion_01 (22)
   m_TagString: Monster
@@ -461,6 +463,7 @@ GameObject:
   - component: {fileID: 50549329285933252}
   - component: {fileID: 114376472337189902}
   - component: {fileID: 58478652109661334}
+  - component: {fileID: 114354942958879070}
   m_Layer: 10
   m_Name: Minion_01 (23)
   m_TagString: Monster
@@ -756,6 +759,7 @@ GameObject:
   - component: {fileID: 50612781919071364}
   - component: {fileID: 114026667640999566}
   - component: {fileID: 58396297650354688}
+  - component: {fileID: 114014077492322466}
   m_Layer: 10
   m_Name: Minion_01 (25)
   m_TagString: Monster
@@ -2673,6 +2677,18 @@ MonoBehaviour:
   coinPrefab: {fileID: 1197351061751520, guid: 608650153ca9c3645833db280039c812, type: 2}
   coinsAverageSpawnNumber: 7
   coinsRandomValue: 1
+--- !u!114 &114014077492322466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789071006232270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!114 &114026667640999566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2760,6 +2776,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 102867099839565568}
+--- !u!114 &114254374720768176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219825401730718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!114 &114271826005524160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2800,6 +2828,18 @@ MonoBehaviour:
   coinPrefab: {fileID: 1197351061751520, guid: 608650153ca9c3645833db280039c812, type: 2}
   coinsAverageSpawnNumber: 7
   coinsRandomValue: 1
+--- !u!114 &114354942958879070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481896237091194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!114 &114376472337189902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2872,6 +2912,18 @@ MonoBehaviour:
   coinPrefab: {fileID: 1197351061751520, guid: 608650153ca9c3645833db280039c812, type: 2}
   coinsAverageSpawnNumber: 7
   coinsRandomValue: 1
+--- !u!114 &114837985481392202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187306838526268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!212 &212040338730272154
 SpriteRenderer:
   m_ObjectHideFlags: 1

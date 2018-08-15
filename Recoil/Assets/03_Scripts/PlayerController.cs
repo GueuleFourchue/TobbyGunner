@@ -388,7 +388,7 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        gameManager.CharacterDeath(GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
+        gameManager.CharacterDeath(this.transform, GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
         chunksManager.SaveBestLevel();
         gameManager.SaveData();
         this.enabled = false;

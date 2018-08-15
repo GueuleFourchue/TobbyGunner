@@ -13,7 +13,9 @@ public class UI_Outfit : MonoBehaviour {
     public GameObject button;
     public PlayerData playerData;
     public Text coinsText;
+    public Text priceText;
     public UI_SelectedOutfit ui_SelectedOutfit;
+    public UIAnimations ui_animations;
 
     bool isUnlocked;
 
@@ -21,19 +23,16 @@ public class UI_Outfit : MonoBehaviour {
     {
         if (PlayerPrefs.HasKey(this.gameObject.name))
             CostumesUnlocked();
+        priceText.text = price.ToString();
     }
 	
-	void Update ()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            UnlockCostume();
-	}
-
     void CostumesUnlocked()
     {
+        isUnlocked = true;
+
         button.SetActive(false);
-        character.transform.localScale = Vector3.one * 1.5f;
-        character.transform.localPosition = new Vector3(character.transform.localPosition.x, -9.7f, character.transform.localPosition.z);
+        character.transform.localScale = Vector3.one * 1.65f;
+        character.transform.localPosition = new Vector3(character.transform.localPosition.x, -13f, character.transform.localPosition.z);
         character.color = new Color(character.color.r, character.color.g, character.color.b, 1);
         if (PlayerPrefs.GetString("EquipedOutfit") == transform.name)
         {
@@ -67,11 +66,14 @@ public class UI_Outfit : MonoBehaviour {
             {
                 button.SetActive(false);
             });
-            character.DOFade(1, 1);
-            character.transform.DOScale(Vector3.one * 1.5f, 1f);
-            character.transform.DOLocalMoveY(-9.7f, 1);
+            
+            character.transform.DOScale(Vector3.one * 1.65f, 1f);
+            character.transform.DOLocalMoveY(-15f, 1).OnComplete(() =>
+            {
+                character.DOFade(1, 1);
+            });
 
-            ui_SelectedOutfit.SetNewOutfitOutline(outline, character.sprite);
+            ui_SelectedOutfit.SetNewOutfitOutline(outline, character.sprite, true);
 
             //Update Player Data
             if (!playerData.unlockedOutfits.Contains(this.transform.name))
@@ -79,6 +81,32 @@ public class UI_Outfit : MonoBehaviour {
             playerData.equipedOutfit = this.gameObject.name;
             PlayerPrefs.SetString(this.gameObject.name, this.gameObject.name);
             PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
+        }
+    }
+
+    public void ChangeCostume()
+    {
+        if (isUnlocked)
+        {
+            //Update Player Data
+            playerData.equipedOutfit = this.gameObject.name;
+            PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
+            ui_SelectedOutfit.SetNewOutfitOutline(outline, character.sprite, false);
+        }
+    }
+
+    public void OutfitButtonOnHold()
+    {
+        if (isUnlocked)
+        {
+            ui_animations.ButtonOnHold(this.transform);
+        }
+    }
+    public void OutfitButtonOffHold()
+    {
+        if (isUnlocked)
+        {
+            ui_animations.ButtonOffHold(this.transform);
         }
     }
 }

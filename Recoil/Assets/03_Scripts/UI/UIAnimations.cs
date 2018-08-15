@@ -28,12 +28,12 @@ public class UIAnimations : MonoBehaviour {
     public void ButtonOnHold(Transform buttonTransform)
     {
         buttonTransform.DOKill();
-        buttonTransform.DOScale(scaleButtonPress, 0.03f);
+        buttonTransform.DOScale(scaleButtonPress, 0.015f);
     }
     public void ButtonOffHold(Transform buttonTransform)
     {
         buttonTransform.DOKill();
-        buttonTransform.DOScale(Vector3.one, 0.03f);
+        buttonTransform.DOScale(Vector3.one, 0.2f);
     }
 
     public void RestartLevel()

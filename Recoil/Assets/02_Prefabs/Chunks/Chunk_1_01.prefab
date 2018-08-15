@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 50265170019776310}
   - component: {fileID: 114918919402282340}
   - component: {fileID: 58518251680320446}
+  - component: {fileID: 114807556503933424}
   m_Layer: 10
   m_Name: Minion_01 (13)
   m_TagString: Monster
@@ -467,6 +468,7 @@ GameObject:
   - component: {fileID: 50250501013560532}
   - component: {fileID: 114510085586873300}
   - component: {fileID: 58197220690625664}
+  - component: {fileID: 114863883945995712}
   m_Layer: 10
   m_Name: Minion_01 (15)
   m_TagString: Monster
@@ -650,6 +652,7 @@ GameObject:
   - component: {fileID: 50485225964230626}
   - component: {fileID: 114886730075420862}
   - component: {fileID: 58584895311001478}
+  - component: {fileID: 114708487052369316}
   m_Layer: 10
   m_Name: Minion_01 (14)
   m_TagString: Monster
@@ -2021,6 +2024,42 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &114708487052369316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826195262736402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
+--- !u!114 &114807556503933424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1295879851810296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
+--- !u!114 &114863883945995712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578454117752156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!114 &114886730075420862
 MonoBehaviour:
   m_ObjectHideFlags: 1

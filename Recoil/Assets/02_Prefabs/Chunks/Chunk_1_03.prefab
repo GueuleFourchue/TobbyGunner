@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 50379573638403194}
   - component: {fileID: 114717296437846476}
   - component: {fileID: 58687494551027698}
+  - component: {fileID: 114206238573867868}
   m_Layer: 10
   m_Name: Minion_01 (14)
   m_TagString: Monster
@@ -240,6 +241,7 @@ GameObject:
   - component: {fileID: 50023625717873662}
   - component: {fileID: 114883618653655030}
   - component: {fileID: 58269070683935372}
+  - component: {fileID: 114957874309726434}
   m_Layer: 10
   m_Name: Minion_01 (13)
   m_TagString: Monster
@@ -1766,6 +1768,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290efff3d5a952241af2dd4a4defc5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114206238573867868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1150519720469678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!114 &114544375176385934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1826,6 +1840,18 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &114957874309726434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264352188031148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathZone: {fileID: 0}
 --- !u!212 &212006441895093410
 SpriteRenderer:
   m_ObjectHideFlags: 1
