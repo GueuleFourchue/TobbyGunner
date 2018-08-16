@@ -13,24 +13,29 @@ public class GameManager : MonoBehaviour {
     public Image blackOverlay;
     public CameraFollow cameraFollow;
 
-    [Header ("Continue")]
+    [Header("Continue")]
+    public PlayerController playerController;
     public Transform deathZone;
     public Transform deathZoneMinPosition;
     public Transform character;
     public CanvasGroup continueCanvas;
     public Animator continueAnimator;
-    Vector3 characterDeathPosition;
     public ContinueResumeTimer continueResumeTimer;
+    public UI_Shield ui_Shield;
+    Vector3 characterDeathPosition;
+    float originGravityScale;
 
+    bool hasProposedContinue;
     bool slowMotion;
     int beginPlayCoins;
 
-    //Continue
+
 
 
 	// Use this for initialization
 	void Start ()
     {
+        originGravityScale = character.GetComponent<Rigidbody2D>().gravityScale;
         beginPlayCoins = playerData.coins;
         StartCoroutine(LoadGUI());
         LoadData();
@@ -55,8 +60,10 @@ public class GameManager : MonoBehaviour {
         animator.enabled = true;
         animator.Play("Death");
 
-        //StartCoroutine(EndLevel());
-        StartCoroutine(ContinuePopUp());
+        if (!hasProposedContinue)
+            StartCoroutine(ContinuePopUp());
+        else
+            StartCoroutine(EndLevel());
     }
 
     public IEnumerator EndLevel()
@@ -99,9 +106,25 @@ public class GameManager : MonoBehaviour {
         blackOverlay.DOFade(0.8f, 0.1f);
     }
 
+    public void ExitContinue()
+    {
+        StartCoroutine(ContinuePopOut());
+    }
+
+    IEnumerator ContinuePopOut()
+    {
+        StartCoroutine(EndLevel());
+        continueCanvas.DOFade(0, 0.4f);
+        yield return new WaitForSeconds(0.4f);
+        continueCanvas.gameObject.SetActive(false);
+        blackOverlay.DOFade(0, 0.6f);
+    }
+
     //After Watching Ad
     public void Continue()
     {
+        hasProposedContinue = true;
+
         //Monsters in Standby during timer
         var monsters = FindObjectsOfType<ContinueDeactivate>();
         foreach(ContinueDeactivate script in monsters)
@@ -115,11 +138,15 @@ public class GameManager : MonoBehaviour {
 
         //Reset Character
         character.GetComponent<Animator>().Rebind();
-        character.GetComponent<PlayerController>().enabled = true;
+        playerController.enabled = true;
         character.position = characterDeathPosition;
-        character.GetComponent<BoxCollider2D>().enabled = true;
-        character.GetComponent<Rigidbody2D>().gravityScale /= 2;
+        character.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        character.GetComponent<Rigidbody2D>().gravityScale = 0;
         cameraFollow.enabled = true;
+        
+        //Invu
+        playerController.YellowColor();
+        ui_Shield.ActivateShieldSprite();
 
         //Reset Big Monster
         deathZone.position = deathZoneMinPosition.position;
@@ -127,11 +154,17 @@ public class GameManager : MonoBehaviour {
         //LaunchTimer
         continueResumeTimer.enabled = true;
         continueResumeTimer.ResumeTimer();
-        character.GetComponent<PlayerController>().enabled = false;
+        playerController.enabled = false;
     }
 
     public void ResumeAfterContinueTimer()
     {
+        //Character
+        character.GetComponent<Rigidbody2D>().gravityScale = originGravityScale;
+        character.GetComponent<BoxCollider2D>().enabled = true;
+        playerController.invulnerability = true;
+        ui_Shield.DecreaseFillValue();
+
         //Activate Monsters
         var monsters = FindObjectsOfType<ContinueDeactivate>();
         foreach (ContinueDeactivate script in monsters)

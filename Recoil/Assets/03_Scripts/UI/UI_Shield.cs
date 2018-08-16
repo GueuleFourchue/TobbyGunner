@@ -15,9 +15,7 @@ public class UI_Shield : MonoBehaviour {
 
     public void DecreaseFillValue()
     {
-        shieldIcon.color = new Color(shieldIcon.color.r, shieldIcon.color.g, shieldIcon.color.b, 1);
-        fillImage.enabled = true;
-        shieldIcon.enabled = true;
+        ActivateShieldSprite();
 
         DOTween.To(() => fillImage.fillAmount, x => fillImage.fillAmount = x, 0, invulnerabilityTimer).OnComplete(() =>
         {
@@ -29,5 +27,13 @@ public class UI_Shield : MonoBehaviour {
 
             });
         });
+    }
+
+    public void ActivateShieldSprite()
+    {
+        shieldIcon.color = new Color(shieldIcon.color.r, shieldIcon.color.g, shieldIcon.color.b, 1);
+        fillImage.enabled = true;
+        shieldIcon.enabled = true;
+
     }
 }

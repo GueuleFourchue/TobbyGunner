@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     bool shoot;
     bool superShoot;
-    bool invulnerability;
+    public bool invulnerability;
     bool charaInvertedSprite;
     bool gunInvertedSprite;
 
@@ -152,9 +152,7 @@ public class PlayerController : MonoBehaviour
             superShoot = false;
             invulnerability = true;
 
-            //SpriteInvuColor
-            SpriteRenderer charaSpriteRenderer = charaSprite.GetComponent<SpriteRenderer>();
-            charaSpriteRenderer.DOColor(new Color(charaSpriteRenderer.color.r, charaSpriteRenderer.color.g, 0.3f, charaSpriteRenderer.color.a), 0.1f);
+            YellowColor();
         }
     }
 
@@ -392,5 +390,12 @@ public class PlayerController : MonoBehaviour
         chunksManager.SaveBestLevel();
         gameManager.SaveData();
         this.enabled = false;
+    }
+
+    public void YellowColor()
+    {
+        //SpriteInvuColor
+        SpriteRenderer charaSpriteRenderer = charaSprite.GetComponent<SpriteRenderer>();
+        charaSpriteRenderer.DOColor(new Color(charaSpriteRenderer.color.r, charaSpriteRenderer.color.g, 0.3f, charaSpriteRenderer.color.a), 0.1f);
     }
 }
