@@ -1,0 +1,35 @@
+Héros
+	IronMan
+	Buzz L'éclair
+	Indiana Jones
+	Dark Vador
+	Batman
+	Marty McFly
+	Jack Sparrow
+	Gandalf
+	Neo
+	Terminator
+	Rambo
+	
+Personnages célèbres
+	Freddie Mercury
+	John lennon
+	Slash
+	Mozart
+	Bob marley
+	Kurt cobain
+	David bowie (Starman)
+	Micheal jackson	
+	Daft punk
+	Gene Simmons
+
+Standards - Jobs, ...
+	Bartender
+	Cop
+	Radioactif
+	Cook
+	Formula 1 pilote
+	Military
+	Groom
+	Doctor
+	Worker
