@@ -20,6 +20,7 @@ public class UI_Outfit : MonoBehaviour {
     public GameObject padlock;
     public UI_SelectedOutfit ui_SelectedOutfit;
     public UIAnimations ui_animations;
+    public UI_OutfitsSlider ui_OutfitsSlider;
 
     [Header("Buy Pop Up")]
     public CanvasGroup buyPopUpCanvas;
@@ -27,7 +28,8 @@ public class UI_Outfit : MonoBehaviour {
     public Text buyPopUpButtonText;
     public UI_BuyPopUpButton ui_BuyPopUpButton;
     public GameObject canBuy;
-    public GameObject cantBuy;
+    public GameObject cantBuyScore;
+    public GameObject cantBuyCoins;
     public Text cantBuyText;
 
     public bool isBought;
@@ -107,6 +109,8 @@ public class UI_Outfit : MonoBehaviour {
             playerData.equipedOutfit = this.gameObject.name;
             PlayerPrefs.SetString(this.gameObject.name, this.gameObject.name);
             PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
+
+            ui_OutfitsSlider.SetSlider();
         }
         else
         {
@@ -138,22 +142,29 @@ public class UI_Outfit : MonoBehaviour {
         if (isUnlocked && price <= playerData.coins)
         {
             canBuy.SetActive(true);
-            cantBuy.SetActive(false);
+            cantBuyScore.SetActive(false);
+            cantBuyCoins.SetActive(false);
 
             ui_BuyPopUpButton.ui_Outfit = this;
             //Text
             string outfitName = transform.name.ToString().Replace("Outfit_", "");
-            buyPopUpText.text = "Buy the outfit " + outfitName.ToUpper() + "?";
+            buyPopUpText.text = outfitName.ToUpper();
             buyPopUpButtonText.text = price.ToString();
         }
         else 
         {
             canBuy.SetActive(false);
-            cantBuy.SetActive(true);
             if (isUnlocked)
-                cantBuyText.text = "You don't have enough coins to buy this outfit.";
+            {
+                cantBuyScore.SetActive(false);
+                cantBuyCoins.SetActive(true);
+            }
             else
-                cantBuyText.text = "Your best score must be at least " + unlockAtLevel + " to unlock this outfit.";
+            {
+                cantBuyText.text = unlockAtLevel.ToString();
+                cantBuyScore.SetActive(true);
+                cantBuyCoins.SetActive(false);
+            }         
         }
     }
 

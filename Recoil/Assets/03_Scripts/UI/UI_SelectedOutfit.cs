@@ -12,6 +12,7 @@ public class UI_SelectedOutfit : MonoBehaviour {
     public CanvasGroup spotLight;
     public Image lightStar1;
     public Image lightStar2;
+    public PlayerData playerData;
 
     [HideInInspector]
     public Image currentOutfitOutline;
@@ -104,9 +105,9 @@ public class UI_SelectedOutfit : MonoBehaviour {
     {
         if (!PlayerPrefs.HasKey("EquipedOutfit"))
         {
-            Debug.Log("null");
             PlayerPrefs.SetString("Outfit_Office", "Outfit_Office");
             PlayerPrefs.SetString("EquipedOutfit", "Outfit_Office");
+            playerData.equipedOutfit = "Outfit_Office";
         }
     }
 }

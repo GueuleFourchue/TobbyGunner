@@ -70,7 +70,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DevDebug
+4a1a8bdd9ed6cb745e22c114fae893b9 Assembly-CSharp.dll:.DevDebug
 327e8f6e2ddc6cf3ab9baf081f1b4326 Assembly-CSharp.dll:UB.D2FogsNoiseTexPE
 c44b99df951d7cf317593f288fc2280b Assembly-CSharp.dll:Colorful.ContrastVignette
 06c25fea7a98f2919cb4d7c33fba35f7 Assembly-CSharp.dll:.PlayerCoinsInGame
@@ -151,7 +151,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChunkTrigger
 14c81bba8918554c9a241c8e2d648b53 Assembly-CSharp.dll:.Chunk
-cbd146d75a9f6b37b16a29dce60a7f22 Assembly-CSharp.dll:.UI_SelectedOutfit
+1de988d46fea301f7ed2e8192418b0e3 Assembly-CSharp.dll:.UI_SelectedOutfit
 22df741b1a3c6d3b215ca28ad83c5a3f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenSpaceAmbientObscurance
 cc6324474ddf8d4b74ad350463fd4ce4 Assembly-CSharp.dll:Colorful.SmartSaturation
 96ec6817543d0fbce80164914512793e Assembly-CSharp.dll:Colorful.VintageFast
@@ -171,6 +171,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 3b4d34314b3aefab8f34180021068a7d Assembly-CSharp.dll:Colorful.RadialBlur
 638a8e307fb0529b27bb6dbd4c2fcf8e Assembly-CSharp.dll:Colorful.WhiteBalance
+5bd021c218f3a4bb5a1935cf5a6a368e Assembly-CSharp.dll:.UI_BuyPopUpButton
 1c31a9b7972ef0def1ed5d26f6457cde Assembly-CSharp.dll:.KillingBlock
 1a867b087637353dbe96c402f84f1ab5 Assembly-CSharp.dll:.MonsterBehaviour
 43fd8c59f7513788b2fff9fbdcf84f8c Assembly-CSharp.dll:Colorful.Glitch
@@ -191,9 +192,10 @@ cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 6070ce609cec20204fd24ce65bed207d Assembly-CSharp.dll:.CoinsGameBehaviour
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UI_AdButton
 3f553f1644d231f5c02258f517edaf1b Assembly-CSharp.dll:Colorful.Strokes
+710efe72bd44de93d750144d8c40e22f Assembly-CSharp.dll:.UI_OutfitsSlider
 30db6bf1abfbd17c6cdd1385b9eba6ca Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.DepthOfField
 5cd8e6c43586f4e15865c4e5bec36ca5 Assembly-CSharp.dll:.ContinueDeactivate
-68a015120dba9272bc3fa2b3aafa5e3d Assembly-CSharp.dll:.UI_Outfit
+4d4499fb08d1cb2cf4e20a83d783352c Assembly-CSharp.dll:.UI_Outfit
 5b38ca4a85baf215725ea369bcf903c5 Assembly-CSharp.dll:Colorful.Histogram
 95882bc7fe0dc2f753129a94d492dcd0 Assembly-CSharp.dll:Colorful.GradientRamp
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UB.EffectBase
@@ -271,4 +273,3 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
-5bd021c218f3a4bb5a1935cf5a6a368e Assembly-CSharp.dll:.UI_BuyPopUpButton

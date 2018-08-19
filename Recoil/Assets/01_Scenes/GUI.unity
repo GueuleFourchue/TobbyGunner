@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: -350}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22796541
@@ -253,13 +253,15 @@ MonoBehaviour:
   padlock: {fileID: 1041724268}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &22796542
@@ -825,11 +827,11 @@ RectTransform:
   - {fileID: 984115546}
   - {fileID: 1999711807}
   m_Father: {fileID: 256096571}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -48.8}
+  m_AnchoredPosition: {x: 0, y: -78.65}
   m_SizeDelta: {x: 247.8, y: 97.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121188453
@@ -1110,7 +1112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -60}
+  m_AnchoredPosition: {x: 230, y: -120}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208266130
@@ -1135,13 +1137,15 @@ MonoBehaviour:
   padlock: {fileID: 471576807}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &208266131
@@ -1316,6 +1320,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 611438679}
+  - {fileID: 782656711}
   - {fileID: 121188452}
   m_Father: {fileID: 799893739}
   m_RootOrder: 2
@@ -1389,7 +1394,7 @@ RectTransform:
   - {fileID: 1595870747}
   - {fileID: 318239729}
   m_Father: {fileID: 1370222997}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1437,7 +1442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -60}
+  m_AnchoredPosition: {x: -230, y: -120}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314978698
@@ -1495,13 +1500,15 @@ MonoBehaviour:
   padlock: {fileID: 471616131}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 1
   isUnlocked: 1
 --- !u!114 &314978701
@@ -1790,7 +1797,7 @@ RectTransform:
   m_Children:
   - {fileID: 1046517291}
   m_Father: {fileID: 1370222997}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2333,7 +2340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -540}
+  m_AnchoredPosition: {x: 230, y: -580}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444112796
@@ -2358,13 +2365,15 @@ MonoBehaviour:
   padlock: {fileID: 647052334}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &444112797
@@ -3005,12 +3014,12 @@ GameObject:
   m_Component:
   - component: {fileID: 525716742}
   m_Layer: 0
-  m_Name: Cant Buy
+  m_Name: Cant Buy Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &525716742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3022,6 +3031,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 831649253}
+  - {fileID: 1636383048}
   m_Father: {fileID: 799893739}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3278,6 +3288,17 @@ Prefab:
       propertyPath: coinsText
       value: 
       objectReference: {fileID: 318239730}
+    - target: {fileID: 225766241930396772, guid: 4b0f6fbaad81c5c4fbab4cdfced94a65,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114549502024336772, guid: 4b0f6fbaad81c5c4fbab4cdfced94a65,
+        type: 2}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b0f6fbaad81c5c4fbab4cdfced94a65, type: 2}
   m_IsPrefabParent: 0
@@ -3578,8 +3599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 69}
-  m_SizeDelta: {x: 801, y: 100}
+  m_AnchoredPosition: {x: 0, y: 49}
+  m_SizeDelta: {x: 801, y: 157.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611438680
 MonoBehaviour:
@@ -3607,13 +3628,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Buy the outfit BARTENDER for '
+  m_Text: Buy the outfit
 --- !u!222 &611438681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4211,6 +4232,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691547164}
+--- !u!1 &707458604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 707458605}
+  - component: {fileID: 707458607}
+  - component: {fileID: 707458606}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &707458605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707458604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1891243454}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 21.6}
+  m_SizeDelta: {x: 389.6, y: 73}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &707458606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707458604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.96862745, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5164de0623094ec44bf7650bb42fa0e8, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 19/27
+--- !u!222 &707458607
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707458604}
 --- !u!1 &738310478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4382,6 +4477,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777923763}
+--- !u!1 &782656710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 782656711}
+  - component: {fileID: 782656713}
+  - component: {fileID: 782656712}
+  m_Layer: 0
+  m_Name: CostumeText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &782656711
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782656710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 256096571}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 16.7}
+  m_SizeDelta: {x: 801, y: 93.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &782656712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782656710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: df6c5a16999e79646b0e7c474b8d6ee0, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 45
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: BARTENDER
+--- !u!222 &782656713
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782656710}
 --- !u!1 &794413485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,17 +4574,17 @@ RectTransform:
   m_GameObject: {fileID: 794413485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 1533461294}
   - {fileID: 1529597014}
   - {fileID: 1195504275}
   m_Father: {fileID: 1370222997}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 57.562714}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &799893738
@@ -4448,9 +4617,10 @@ RectTransform:
   - {fileID: 1348907083}
   - {fileID: 256096571}
   - {fileID: 525716742}
+  - {fileID: 1217689823}
   - {fileID: 1682238522}
   m_Father: {fileID: 1370222997}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4868,7 +5038,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You don't have enough coins to buy this outfit.
+  m_Text: "You don't have enough           \n to buy this outfit."
 --- !u!222 &831649255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4916,7 +5086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -300}
+  m_AnchoredPosition: {x: 230, y: -350}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &863404359
@@ -4941,13 +5111,15 @@ MonoBehaviour:
   padlock: {fileID: 762268784}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &863404360
@@ -5164,6 +5336,84 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874903297}
+--- !u!1 &925183604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 925183605}
+  - component: {fileID: 925183607}
+  - component: {fileID: 925183606}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &925183605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925183604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1217689823}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -11}
+  m_SizeDelta: {x: 680.4, y: 238}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &925183606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925183604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5164de0623094ec44bf7650bb42fa0e8, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 45
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Your best score must be at least
+
+
+
+    to unlock this outfit.'
+--- !u!222 &925183607
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925183604}
 --- !u!1 &927557483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5436,6 +5686,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 984115545}
+--- !u!1 &989953040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 989953041}
+  - component: {fileID: 989953043}
+  - component: {fileID: 989953042}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &989953041
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989953040}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1891243454}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.30769232, y: 1}
+  m_AnchoredPosition: {x: 36.965, y: -22.4}
+  m_SizeDelta: {x: 624.8, y: -75.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &989953042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989953040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.96862745, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ca401a45a7003a0408edbdc64d9a8247, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0.511
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &989953043
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989953040}
 --- !u!1 &991389865
 GameObject:
   m_ObjectHideFlags: 0
@@ -5728,7 +6046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -540}
+  m_AnchoredPosition: {x: -230, y: -580}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051361984
@@ -5753,13 +6071,15 @@ MonoBehaviour:
   padlock: {fileID: 2054880868}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &1051361985
@@ -6307,7 +6627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122157696
@@ -6332,13 +6652,15 @@ MonoBehaviour:
   padlock: {fileID: 2069368152}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &1122157697
@@ -6624,6 +6946,41 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 28.8}
   m_SizeDelta: {x: 135.94, y: 124.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1217689822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1217689823}
+  m_Layer: 0
+  m_Name: Cant Buy Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1217689823
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217689822}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 925183605}
+  - {fileID: 2114526874}
+  m_Father: {fileID: 799893739}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1222939698
 GameObject:
@@ -7304,6 +7661,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348907082}
+--- !u!1 &1355540309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1355540310}
+  - component: {fileID: 1355540312}
+  - component: {fileID: 1355540311}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1355540310
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355540309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1891243454}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 2.3499892, y: -22.399994}
+  m_SizeDelta: {x: 555.6, y: -25.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1355540311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355540309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.96862745, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: aaaed85b235fd4943839ba5aba39f1f8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1355540312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355540309}
 --- !u!114 &1363315324 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114203620760227712, guid: 4b0f6fbaad81c5c4fbab4cdfced94a65,
@@ -7338,7 +7763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1370222997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7351,8 +7776,10 @@ RectTransform:
   m_Children:
   - {fileID: 1438942864}
   - {fileID: 1528391784}
+  - {fileID: 1647326927}
   - {fileID: 306777856}
   - {fileID: 794413486}
+  - {fileID: 1891243454}
   - {fileID: 331055412}
   - {fileID: 1671374688}
   - {fileID: 799893739}
@@ -7371,7 +7798,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1370222996}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -8732,6 +9159,154 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606958319}
+--- !u!1 &1636383047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1636383048}
+  - component: {fileID: 1636383050}
+  - component: {fileID: 1636383049}
+  m_Layer: 0
+  m_Name: Coins text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1636383048
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1636383047}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 525716742}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 246, y: 26}
+  m_SizeDelta: {x: 183.7, y: 65.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1636383049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1636383047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.05676904, g: 0.77205884, b: 0.71286243, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: df6c5a16999e79646b0e7c474b8d6ee0, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 45
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: coins
+--- !u!222 &1636383050
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1636383047}
+--- !u!1 &1647326926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1647326927}
+  - component: {fileID: 1647326929}
+  - component: {fileID: 1647326928}
+  m_Layer: 0
+  m_Name: Category
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1647326927
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647326926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 1370222997}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -141}
+  m_SizeDelta: {x: 281.78003, y: 130.83002}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1647326928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647326926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.44776875, g: 1, b: 0.27205884, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5164de0623094ec44bf7650bb42fa0e8, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 130
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Jobs
+--- !u!222 &1647326929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647326926}
 --- !u!1 &1662275665
 GameObject:
   m_ObjectHideFlags: 0
@@ -8910,11 +9485,11 @@ RectTransform:
   - {fileID: 2138924716}
   - {fileID: 444112795}
   m_Father: {fileID: 1370222997}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671374689
@@ -8934,6 +9509,7 @@ MonoBehaviour:
   spotLight: {fileID: 1533461297}
   lightStar1: {fileID: 1404867056}
   lightStar2: {fileID: 1257649187}
+  playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
   currentOutfitOutline: {fileID: 0}
 --- !u!1 &1680749672
 GameObject:
@@ -9164,7 +9740,7 @@ RectTransform:
   - {fileID: 353604280}
   - {fileID: 1940869784}
   m_Father: {fileID: 799893739}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10473,6 +11049,57 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1885360798}
+--- !u!1 &1891243453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1891243454}
+  - component: {fileID: 1891243455}
+  m_Layer: 0
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1891243454
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891243453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1355540310}
+  - {fileID: 989953041}
+  - {fileID: 707458605}
+  m_Father: {fileID: 1370222997}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 56}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1891243455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891243453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb89f38145e5a54e8df75fe5506c52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
+  fillImage: {fileID: 989953042}
+  countText: {fileID: 707458606}
 --- !u!1 &1901657816
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,7 +11921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -300}
+  m_AnchoredPosition: {x: -230, y: -350}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087663043
@@ -11319,13 +11946,15 @@ MonoBehaviour:
   padlock: {fileID: 1161109017}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &2087663044
@@ -11488,7 +12117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2096442651
 Transform:
   m_ObjectHideFlags: 0
@@ -11505,6 +12134,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2114526873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2114526874}
+  - component: {fileID: 2114526876}
+  - component: {fileID: 2114526875}
+  m_Layer: 0
+  m_Name: ScoreText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2114526874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114526873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1217689823}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000061035156, y: -11.000244}
+  m_SizeDelta: {x: 680.4, y: 238}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2114526875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114526873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0.6117647, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: df6c5a16999e79646b0e7c474b8d6ee0, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 10
+--- !u!222 &2114526876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114526873}
 --- !u!1 &2118820954
 GameObject:
   m_ObjectHideFlags: 0
@@ -11694,7 +12397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -540}
+  m_AnchoredPosition: {x: 0, y: -580}
   m_SizeDelta: {x: 215, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138924717
@@ -11719,13 +12422,15 @@ MonoBehaviour:
   padlock: {fileID: 298754582}
   ui_SelectedOutfit: {fileID: 1671374689}
   ui_animations: {fileID: 1363315324}
+  ui_OutfitsSlider: {fileID: 1891243455}
   buyPopUpCanvas: {fileID: 799893740}
-  buyPopUpText: {fileID: 611438680}
+  buyPopUpText: {fileID: 782656712}
   buyPopUpButtonText: {fileID: 1999711808}
   ui_BuyPopUpButton: {fileID: 121188454}
   canBuy: {fileID: 256096570}
-  cantBuy: {fileID: 525716741}
-  cantBuyText: {fileID: 831649254}
+  cantBuyScore: {fileID: 1217689822}
+  cantBuyCoins: {fileID: 525716741}
+  cantBuyText: {fileID: 2114526875}
   isBought: 0
   isUnlocked: 0
 --- !u!114 &2138924718
