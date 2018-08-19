@@ -15,19 +15,14 @@ public class UI_SelectedOutfit : MonoBehaviour {
 
     [HideInInspector]
     public Image currentOutfitOutline;
-    public Dictionary<string, Sprite> outfits = new Dictionary<string, Sprite>();
 
 
     void Start ()
     {
+        SetFirstOutfit();
         SetSelectedOutfitOutline();
     }
 
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void SetSelectedOutfitOutline()
     {
@@ -103,5 +98,15 @@ public class UI_SelectedOutfit : MonoBehaviour {
     public void StartSetPreviewOutfit(Transform visualParent)
     {
         tobbyPreview.sprite = visualParent.Find("Visual").GetComponent<Image>().sprite;
+    }
+
+    void SetFirstOutfit()
+    {
+        if (!PlayerPrefs.HasKey("EquipedOutfit"))
+        {
+            Debug.Log("null");
+            PlayerPrefs.SetString("Outfit_Office", "Outfit_Office");
+            PlayerPrefs.SetString("EquipedOutfit", "Outfit_Office");
+        }
     }
 }

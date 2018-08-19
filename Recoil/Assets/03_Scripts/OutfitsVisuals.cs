@@ -55,8 +55,4 @@ public class OutfitsVisuals : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

@@ -8,27 +8,53 @@ using UnityEngine.SceneManagement;
 public class UI_Outfit : MonoBehaviour {
 
     public int price;
+    public int unlockAtLevel;
+
+    [Header ("Drag & Drop")]
     public Image outline;
     public Image character;
     public GameObject button;
     public PlayerData playerData;
     public Text coinsText;
     public Text priceText;
+    public GameObject padlock;
     public UI_SelectedOutfit ui_SelectedOutfit;
     public UIAnimations ui_animations;
 
-    bool isUnlocked;
+    [Header("Buy Pop Up")]
+    public CanvasGroup buyPopUpCanvas;
+    public Text buyPopUpText;
+    public Text buyPopUpButtonText;
+    public UI_BuyPopUpButton ui_BuyPopUpButton;
+    public GameObject canBuy;
+    public GameObject cantBuy;
+    public Text cantBuyText;
+
+    public bool isBought;
+    public bool isUnlocked;
 
 	void Start ()
     {
         if (PlayerPrefs.HasKey(this.gameObject.name))
-            CostumesUnlocked();
+            CostumeBought();
+        if (PlayerPrefs.GetInt("BestLevel") >= unlockAtLevel)
+            CostumeUnlocked();
         priceText.text = price.ToString();
     }
-	
-    void CostumesUnlocked()
+
+    void CostumeUnlocked()
     {
+        padlock.SetActive(false);
+        character.enabled = true;
         isUnlocked = true;
+
+        if (!PlayerPrefs.HasKey(this.gameObject.name))
+            button.SetActive(true);
+    }
+	
+    void CostumeBought()
+    {
+        isBought = true;
 
         button.SetActive(false);
         character.transform.localScale = Vector3.one * 1.4f;
@@ -42,7 +68,7 @@ public class UI_Outfit : MonoBehaviour {
             outline.color = Color.white;
     }
 
-    public void UnlockCostume()
+    public void BuyCostume()
     {
         if (price <= playerData.coins)
         {
@@ -60,7 +86,7 @@ public class UI_Outfit : MonoBehaviour {
                 }
             }
 
-            isUnlocked = true;
+            isBought = true;
 
             button.GetComponent<CanvasGroup>().DOFade(0, 0.2f).OnComplete(() =>
             {
@@ -82,31 +108,62 @@ public class UI_Outfit : MonoBehaviour {
             PlayerPrefs.SetString(this.gameObject.name, this.gameObject.name);
             PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
         }
+        else
+        {
+            BuyPopUp();
+        }
+    }
+
+    public void ClickOutfitButton()
+    {
+        if (isBought)
+            ChangeCostume();
+        else 
+            BuyPopUp();
     }
 
     public void ChangeCostume()
     {
-        if (isUnlocked)
+        //Update Player Data
+        playerData.equipedOutfit = this.gameObject.name;
+        PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
+        ui_SelectedOutfit.SetNewOutfitOutline(outline, character.sprite, false);
+    }
+
+    void BuyPopUp()
+    {
+        buyPopUpCanvas.gameObject.SetActive(true);
+        buyPopUpCanvas.DOFade(1, 0.1f);
+
+        if (isUnlocked && price <= playerData.coins)
         {
-            //Update Player Data
-            playerData.equipedOutfit = this.gameObject.name;
-            PlayerPrefs.SetString("EquipedOutfit", this.gameObject.name);
-            ui_SelectedOutfit.SetNewOutfitOutline(outline, character.sprite, false);
+            canBuy.SetActive(true);
+            cantBuy.SetActive(false);
+
+            ui_BuyPopUpButton.ui_Outfit = this;
+            //Text
+            string outfitName = transform.name.ToString().Replace("Outfit_", "");
+            buyPopUpText.text = "Buy the outfit " + outfitName.ToUpper() + "?";
+            buyPopUpButtonText.text = price.ToString();
+        }
+        else 
+        {
+            canBuy.SetActive(false);
+            cantBuy.SetActive(true);
+            if (isUnlocked)
+                cantBuyText.text = "You don't have enough coins to buy this outfit.";
+            else
+                cantBuyText.text = "Your best score must be at least " + unlockAtLevel + " to unlock this outfit.";
         }
     }
 
-    public void OutfitButtonOnHold()
+
+    public void BuyPopUpExit()
     {
-        if (isUnlocked)
+        buyPopUpCanvas.DOFade(0, 0.1f).OnComplete(() =>
         {
-            ui_animations.ButtonOnHold(this.transform);
-        }
+            buyPopUpCanvas.gameObject.SetActive(false);
+        });
     }
-    public void OutfitButtonOffHold()
-    {
-        if (isUnlocked)
-        {
-            ui_animations.ButtonOffHold(this.transform);
-        }
-    }
+
 }

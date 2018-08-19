@@ -339,6 +339,7 @@
     <Compile Include="Assets\03_Scripts\ShootTarget.cs" />
     <Compile Include="Assets\03_Scripts\Tp.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_AdButton.cs" />
+    <Compile Include="Assets\03_Scripts\UI\UI_BuyPopUpButton.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_InGame.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_Outfit.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_SelectedOutfit.cs" />

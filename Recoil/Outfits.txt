@@ -24,12 +24,12 @@ Celebrities
 	Gene Simmons
 
 Jobs
-	Bartender
-	Cop
-	Radioactif
-	Cook
-	Formula 1 pilote
-	Military
-	Groom
-	Doctor
-	Worker
+	4- Bartender
+	9- Policeman 
+	7- Radioactive
+	5- Cook
+	3- Pilote
+	2- Military
+	8- Groom
+	6- Surgeon
+	1- Office

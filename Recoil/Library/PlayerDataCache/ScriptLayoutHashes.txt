@@ -193,7 +193,7 @@ cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 3f553f1644d231f5c02258f517edaf1b Assembly-CSharp.dll:Colorful.Strokes
 30db6bf1abfbd17c6cdd1385b9eba6ca Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.DepthOfField
 5cd8e6c43586f4e15865c4e5bec36ca5 Assembly-CSharp.dll:.ContinueDeactivate
-07cce1819a9a366d30f99dd7c54b0294 Assembly-CSharp.dll:.UI_Outfit
+68a015120dba9272bc3fa2b3aafa5e3d Assembly-CSharp.dll:.UI_Outfit
 5b38ca4a85baf215725ea369bcf903c5 Assembly-CSharp.dll:Colorful.Histogram
 95882bc7fe0dc2f753129a94d492dcd0 Assembly-CSharp.dll:Colorful.GradientRamp
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UB.EffectBase
@@ -271,3 +271,4 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
+5bd021c218f3a4bb5a1935cf5a6a368e Assembly-CSharp.dll:.UI_BuyPopUpButton
