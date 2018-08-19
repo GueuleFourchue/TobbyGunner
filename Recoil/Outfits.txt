@@ -1,4 +1,4 @@
-Héros
+Heroes
 	IronMan
 	Buzz L'éclair
 	Indiana Jones
@@ -11,7 +11,7 @@ Héros
 	Terminator
 	Rambo
 	
-Personnages célèbres
+Celebrities
 	Freddie Mercury
 	John lennon
 	Slash
@@ -23,7 +23,7 @@ Personnages célèbres
 	Daft punk
 	Gene Simmons
 
-Standards - Jobs, ...
+Jobs
 	Bartender
 	Cop
 	Radioactif

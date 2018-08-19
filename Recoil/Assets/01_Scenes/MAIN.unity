@@ -417,8 +417,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 200705224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 0.005, y: 0.063, z: 0}
+  m_LocalScale: {x: 0.195, y: 0.195, z: 0.195}
   m_Children: []
   m_Father: {fileID: 442810617}
   m_RootOrder: 2
@@ -457,12 +457,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: df4e5db03ac57be46a22438eedb6a5c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50f6827bfb53f0a47a2f62fc8efe1368, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.88, y: 2.48}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -953,10 +953,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterVisual: {fileID: 200705226}
-  bartender: {fileID: 21300000, guid: df4e5db03ac57be46a22438eedb6a5c6, type: 3}
-  terminator: {fileID: 21300000, guid: 38dd844b6f3d7834ba1accc3b7ed9bec, type: 3}
-  rambo: {fileID: 21300000, guid: ac60be737dabfc040a022a368562d487, type: 3}
-  mercury: {fileID: 21300000, guid: 1701977a7780a1345b0cc6b5f0375d06, type: 3}
+  bartender: {fileID: 21300000, guid: a3471378c9a52794bb0ae7e2fc5c9438, type: 3}
+  policeman: {fileID: 21300000, guid: 50f6827bfb53f0a47a2f62fc8efe1368, type: 3}
+  radioactive: {fileID: 21300000, guid: 83be6adcc3ca6b74a909465ffef78e96, type: 3}
+  cook: {fileID: 21300000, guid: c990e313ca3db2c4cb128fa54d0b960d, type: 3}
+  pilote: {fileID: 21300000, guid: cec880613d9250b46a177ba9c58ade99, type: 3}
+  military: {fileID: 21300000, guid: 3a72fb7a6405bfb4c982ef4e4d0e5633, type: 3}
+  groom: {fileID: 21300000, guid: 0036853ba2ddcc7439032528866fed1e, type: 3}
+  surgeon: {fileID: 21300000, guid: 7b9b3c18f0d4c3841ab9e5e81860d867, type: 3}
+  office: {fileID: 21300000, guid: 2e75e58c03df99f4e8d0de965741b421, type: 3}
+  terminator: {fileID: 21300000, guid: 3c785747260d7e946b0c4091082f9389, type: 3}
+  rambo: {fileID: 21300000, guid: 633c7ea51ccb0614e8ac614d5d78749d, type: 3}
+  mercury: {fileID: 21300000, guid: b50ee0c727af34549b1cd9a6fe7717c7, type: 3}
 --- !u!1 &462957406
 GameObject:
   m_ObjectHideFlags: 0
@@ -6108,7 +6116,7 @@ Prefab:
     - target: {fileID: 212260489982374492, guid: 2dae7473c260371419b27781d4b846da,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 212177626122926782, guid: 2dae7473c260371419b27781d4b846da,
         type: 2}

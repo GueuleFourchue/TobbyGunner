@@ -31,8 +31,8 @@ public class UI_Outfit : MonoBehaviour {
         isUnlocked = true;
 
         button.SetActive(false);
-        character.transform.localScale = Vector3.one * 1.65f;
-        character.transform.localPosition = new Vector3(character.transform.localPosition.x, -13f, character.transform.localPosition.z);
+        character.transform.localScale = Vector3.one * 1.4f;
+        character.transform.localPosition = new Vector3(character.transform.localPosition.x, 10f, character.transform.localPosition.z);
         character.color = new Color(character.color.r, character.color.g, character.color.b, 1);
         if (PlayerPrefs.GetString("EquipedOutfit") == transform.name)
         {
@@ -67,8 +67,8 @@ public class UI_Outfit : MonoBehaviour {
                 button.SetActive(false);
             });
             
-            character.transform.DOScale(Vector3.one * 1.65f, 1f);
-            character.transform.DOLocalMoveY(-15f, 1).OnComplete(() =>
+            character.transform.DOScale(Vector3.one * 1.4f, 1f);
+            character.transform.DOLocalMoveY(10f, 1).OnComplete(() =>
             {
                 character.DOFade(1, 1);
             });
