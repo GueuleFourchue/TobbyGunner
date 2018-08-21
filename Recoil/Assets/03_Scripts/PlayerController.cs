@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public ChunksManager chunksManager;
     public GameObject dottedLine;
-    public OutfitsData outfitsData;
 
     [Header("CameraEffects")]
     public Colorful.SmartSaturation saturationEffect;
@@ -309,7 +308,7 @@ public class PlayerController : MonoBehaviour
         //CameraEffects
         if (saturationEffect.enabled == false)
             saturationEffect.enabled = true;
-        saturationEffect.Boost = Mathf.Lerp(saturationEffect.Boost, 0.5f, slomoLerp);
+        saturationEffect.Boost = Mathf.Lerp(saturationEffect.Boost, 0.3f, slomoLerp);
 
         if (vignette.enabled == false)
             vignette.enabled = true;
@@ -386,9 +385,9 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        gameManager.CharacterDeath(this.transform, GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
         chunksManager.SaveBestLevel();
         gameManager.SaveData();
+        gameManager.CharacterDeath(this.transform, GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
         this.enabled = false;
     }
 

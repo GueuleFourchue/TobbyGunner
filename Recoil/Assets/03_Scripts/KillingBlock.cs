@@ -28,7 +28,7 @@ public class KillingBlock : MonoBehaviour {
         particle.transform.position = transform.position;
 
         coinsAverageSpawnNumber = coinsAverageSpawnNumber + Random.Range(-coinsRandomValue, coinsRandomValue);
-        SpawnCoins();
+        //SpawnCoins();
 
         Destroy(particle, 1f);
         Destroy(this.gameObject);

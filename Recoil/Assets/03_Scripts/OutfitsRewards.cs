@@ -62,11 +62,13 @@ public class OutfitsRewards : MonoBehaviour {
         }
 
         if (!displayPopUp)
-        gameManager.StartCoroutine("EndLevel");
+            gameManager.StartCoroutine("EndLevel");
     }
 
     IEnumerator OutfitReward(int index)
     {
+        yield return new WaitForSeconds(0.5f);
+
         outfitsRewardsCanvas.gameObject.SetActive(true);
         outfitsRewardsCanvas.DOFade(1f, 0.2f);
 

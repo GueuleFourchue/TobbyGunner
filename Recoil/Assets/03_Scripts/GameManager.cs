@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
     public Animator continueAnimator;
     public ContinueResumeTimer continueResumeTimer;
     public UI_Shield ui_Shield;
+    public Colorful.Grayscale grayscale;
     Vector3 characterDeathPosition;
     float originGravityScale;
 
@@ -61,10 +62,15 @@ public class GameManager : MonoBehaviour {
         animator.enabled = true;
         animator.Play("Death");
 
+        //Grayscale
+        grayscale.enabled = true;
+        grayscale.Amount = 0;
+        DOTween.To(() => grayscale.Amount, x => grayscale.Amount = x, 0.5f, 0.5f);
+
         if (!hasProposedContinue)
             StartCoroutine(ContinuePopUp());
         else
-            StartCoroutine(EndLevel());
+            outfitsRewards.StartCoroutine("CheckUnlockedOutfit");
     }
 
     public IEnumerator EndLevel()
@@ -114,7 +120,6 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator ContinuePopOut()
     {
-        //StartCoroutine(EndLevel());
         outfitsRewards.CheckUnlockedOutfit();
 
         continueCanvas.DOFade(0, 0.2f);
@@ -158,6 +163,13 @@ public class GameManager : MonoBehaviour {
         continueResumeTimer.enabled = true;
         continueResumeTimer.ResumeTimer();
         playerController.enabled = false;
+
+        //ImageEffects
+        DOTween.To(() => grayscale.Amount, x => grayscale.Amount = x, 0f, 2.5f).OnComplete(() =>
+        {
+            grayscale.enabled = false;
+        });
+
     }
 
     public void ResumeAfterContinueTimer()

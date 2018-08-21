@@ -106,12 +106,12 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-e643795b7c891999ccc85ca61e3b255f Assembly-CSharp.dll:.GameManager
+d4f822477dfd35053fc8610972af66ca Assembly-CSharp.dll:.GameManager
 71cdc3a3acad4685ecc49c9a54354eab Assembly-CSharp.dll:.OutfitsVisuals
 71778c9b45c50a65b865c5bc42204043 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
 dfc4dd34881fb5c8871e6d4be79d2228 Assembly-CSharp.dll:.UI_Shield
 cc897e31f90a455da1ad6fffc97043f1 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Antialiasing
-f0a4635c955335f72c4f9d5df19c1546 Assembly-CSharp.dll:.ContinueResumeTimer
+1e11eb1ea4ed987dbbf583f59d8ec3d4 Assembly-CSharp.dll:.ContinueResumeTimer
 b51ee8ca9b9a126b63b0710071d0a57a Assembly-CSharp.dll:.UI_InGame
 206f014fe472d2e510b6dd64e00e7645 Assembly-CSharp.dll:Colorful.Posterize
 a32f33d00a7a1fe2bf4c764c4b02d30d Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BloomAndFlares
@@ -172,6 +172,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 3b4d34314b3aefab8f34180021068a7d Assembly-CSharp.dll:Colorful.RadialBlur
 638a8e307fb0529b27bb6dbd4c2fcf8e Assembly-CSharp.dll:Colorful.WhiteBalance
 5bd021c218f3a4bb5a1935cf5a6a368e Assembly-CSharp.dll:.UI_BuyPopUpButton
+10466003daf9d6d9f0b2f6ab623f4a93 Assembly-CSharp.dll:.OutfitsRewards
 1c31a9b7972ef0def1ed5d26f6457cde Assembly-CSharp.dll:.KillingBlock
 1a867b087637353dbe96c402f84f1ab5 Assembly-CSharp.dll:.MonsterBehaviour
 43fd8c59f7513788b2fff9fbdcf84f8c Assembly-CSharp.dll:Colorful.Glitch
@@ -185,7 +186,7 @@ ae4a11bfcf55389fa05744b618518c26 Assembly-CSharp.dll:Colorful.BilateralGaussianB
 7a2a7fdacd95347d8cf641ad7659bd08 Assembly-CSharp.dll:Colorful.DynamicLookup
 7b9ff7c28c88f94c4c24423377a183f0 Assembly-CSharp.dll:Colorful.ChannelClamper
 f5d561eb229accbca273a224fd78db8a Assembly-CSharp.dll:Colorful.ChannelMixer
-ac16cceacb3d2d4971fe49345845c74d Assembly-CSharp.dll:.PlayerController
+347f175762336769226008908fa2c229 Assembly-CSharp.dll:.PlayerController
 cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenOverlay
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
@@ -273,4 +274,3 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
-10466003daf9d6d9f0b2f6ab623f4a93 Assembly-CSharp.dll:.OutfitsRewards

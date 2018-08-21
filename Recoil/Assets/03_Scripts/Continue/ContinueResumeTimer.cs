@@ -8,6 +8,7 @@ public class ContinueResumeTimer : MonoBehaviour {
 
     public GameManager gameManager;
     public Text timerText;
+    public Image circle;
     float timerValue = 3;
     public PlayerController playerController;
     float timerThreshold = 2;
@@ -20,9 +21,12 @@ public class ContinueResumeTimer : MonoBehaviour {
         timerValue = 3;
         timerThreshold = 2;
         timerText.enabled = true;
+        circle.gameObject.SetActive(true);
         timerText.text = timerValue.ToString();
         activateTimer = true;
         TextAnimation(3f);
+
+        DOTween.To(() => circle.fillAmount, x => circle.fillAmount = x, 0f, 3f).SetEase(Ease.Linear);
     }
 
     private void Update()
@@ -49,9 +53,9 @@ public class ContinueResumeTimer : MonoBehaviour {
     void TextAnimation(float timer)
     {
         timerText.text = timer.ToString();
-        transform.DOScale(1.1f, 0.2f).OnComplete(() =>
+        timerText.transform.DOScale(1.1f, 0.2f).OnComplete(() =>
         {
-            transform.DOScale(1f, 0.7f);
+            timerText.transform.DOScale(1f, 0.7f);
         });
         changeText = false;
     }

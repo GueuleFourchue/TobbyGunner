@@ -18,7 +18,6 @@ public class UI_OutfitsSlider : MonoBehaviour {
     public void SetSlider()
     {
         float outfitsCount = playerData.unlockedOutfits.Count;
-        Debug.Log(outfitsCount);
         float fill = outfitsCount / 27f;
 
         DOTween.To(() => fillImage.fillAmount, x => fillImage.fillAmount = x, fill, 1);

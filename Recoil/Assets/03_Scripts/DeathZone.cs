@@ -9,10 +9,6 @@ public class DeathZone : MonoBehaviour {
     public float moveSpeedIncrease;
     public float maxMoveSpeed;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()
@@ -21,7 +17,7 @@ public class DeathZone : MonoBehaviour {
 
         if (transform.position.y < deathZoneMinPosition.position.y)
         {
-            transform.position = new Vector3(0, deathZoneMinPosition.position.y, 0);
+            transform.position = new Vector3(0, deathZoneMinPosition.position.y + 0.1f, 0);
         }
     }
 
