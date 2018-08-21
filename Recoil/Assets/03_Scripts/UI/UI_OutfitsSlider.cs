@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UI_OutfitsSlider : MonoBehaviour {
 
@@ -19,7 +20,9 @@ public class UI_OutfitsSlider : MonoBehaviour {
         float outfitsCount = playerData.unlockedOutfits.Count;
         Debug.Log(outfitsCount);
         float fill = outfitsCount / 27f;
-        fillImage.fillAmount = fill;
+
+        DOTween.To(() => fillImage.fillAmount, x => fillImage.fillAmount = x, fill, 1);
+        //fillImage.fillAmount = fill;
         countText.text = outfitsCount + "/27";
     }
 	

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public CanvasGroup blackBackground;
     public Image blackOverlay;
     public CameraFollow cameraFollow;
+    public OutfitsRewards outfitsRewards;
 
     [Header("Continue")]
     public PlayerController playerController;
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         Scene s = SceneManager.GetSceneByName("GUI");
         GameObject[] guiObject = s.GetRootGameObjects();
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(1.1f);
         continueCanvas.gameObject.SetActive(true);
-        continueCanvas.DOFade(1, 0.4f);
+        continueCanvas.DOFade(1, 0.2f);
         blackOverlay.DOFade(0.8f, 0.1f);
     }
 
@@ -113,9 +114,11 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator ContinuePopOut()
     {
-        StartCoroutine(EndLevel());
-        continueCanvas.DOFade(0, 0.4f);
-        yield return new WaitForSeconds(0.4f);
+        //StartCoroutine(EndLevel());
+        outfitsRewards.CheckUnlockedOutfit();
+
+        continueCanvas.DOFade(0, 0.2f);
+        yield return new WaitForSeconds(0.2f);
         continueCanvas.gameObject.SetActive(false);
         blackOverlay.DOFade(0, 0.6f);
     }

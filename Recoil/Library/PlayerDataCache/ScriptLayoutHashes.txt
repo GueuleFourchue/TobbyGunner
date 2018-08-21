@@ -106,7 +106,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-d66fd2d7a81a7039621f50b49bdd9c62 Assembly-CSharp.dll:.GameManager
+e643795b7c891999ccc85ca61e3b255f Assembly-CSharp.dll:.GameManager
 71cdc3a3acad4685ecc49c9a54354eab Assembly-CSharp.dll:.OutfitsVisuals
 71778c9b45c50a65b865c5bc42204043 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
 dfc4dd34881fb5c8871e6d4be79d2228 Assembly-CSharp.dll:.UI_Shield
@@ -273,3 +273,4 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
+10466003daf9d6d9f0b2f6ab623f4a93 Assembly-CSharp.dll:.OutfitsRewards

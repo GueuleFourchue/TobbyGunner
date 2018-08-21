@@ -333,9 +333,11 @@
     <Compile Include="Assets\03_Scripts\GUI_Manager.cs" />
     <Compile Include="Assets\03_Scripts\KillingBlock.cs" />
     <Compile Include="Assets\03_Scripts\MonsterBehaviour.cs" />
+    <Compile Include="Assets\03_Scripts\OutfitsRewards.cs" />
     <Compile Include="Assets\03_Scripts\OutfitsVisuals.cs" />
     <Compile Include="Assets\03_Scripts\PlayerCoinsInGame.cs" />
     <Compile Include="Assets\03_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\03_Scripts\PlayerPrefsUtility.cs" />
     <Compile Include="Assets\03_Scripts\ShootTarget.cs" />
     <Compile Include="Assets\03_Scripts\Tp.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_AdButton.cs" />

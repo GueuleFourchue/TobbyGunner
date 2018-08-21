@@ -29,6 +29,8 @@ public class OutfitsVisuals : MonoBehaviour {
 
     void Start ()
     {
+        //Set Character Outfit
+
         outfits.Add("Outfit_Bartender", bartender);
         outfits.Add("Outfit_Policeman", policeman);
         outfits.Add("Outfit_Radioactive", radioactive);

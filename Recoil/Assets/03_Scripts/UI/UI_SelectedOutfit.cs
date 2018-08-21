@@ -44,7 +44,11 @@ public class UI_SelectedOutfit : MonoBehaviour {
         image.DOColor(selectedOutfitOutlineColor, 0.05f);
         currentOutfitOutline = image;
         if (newOutfit)
+        {
+            StopCoroutine(ChangeNewOutfitAnim(tobby));
             StartCoroutine(ChangeNewOutfitAnim(tobby));
+        }
+            
         else
             StartCoroutine(ChangeOwnedOutfitAnim(tobby));
     }
