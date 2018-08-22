@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour {
         ui_Shield.ActivateShieldSprite();
 
         //Reset Big Monster
-        deathZone.position = deathZoneMinPosition.position;
+        deathZone.position = new Vector3(0,deathZoneMinPosition.position.y,0);
 
         //LaunchTimer
         continueResumeTimer.enabled = true;
