@@ -62,15 +62,17 @@ public class GameManager : MonoBehaviour {
         animator.enabled = true;
         animator.Play("Death");
 
-        //Grayscale
-        grayscale.enabled = true;
-        grayscale.Amount = 0;
-        DOTween.To(() => grayscale.Amount, x => grayscale.Amount = x, 0.5f, 0.5f);
 
         if (!hasProposedContinue)
             StartCoroutine(ContinuePopUp());
         else
-            outfitsRewards.StartCoroutine("CheckUnlockedOutfit");
+            StartCoroutine(DelayOutfitsReward(0.5f));
+    }
+
+    IEnumerator DelayOutfitsReward(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        outfitsRewards.StartCoroutine("CheckUnlockedOutfit");
     }
 
     public IEnumerator EndLevel()
@@ -165,6 +167,8 @@ public class GameManager : MonoBehaviour {
         playerController.enabled = false;
 
         //ImageEffects
+        grayscale.enabled = true;
+        grayscale.Amount = 0.5f;
         DOTween.To(() => grayscale.Amount, x => grayscale.Amount = x, 0f, 2.5f).OnComplete(() =>
         {
             grayscale.enabled = false;

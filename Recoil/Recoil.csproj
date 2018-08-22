@@ -317,6 +317,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\03_Scripts\BackgroundParalax.cs" />
+    <Compile Include="Assets\03_Scripts\Blocks\CoinBlock.cs" />
+    <Compile Include="Assets\03_Scripts\Blocks\KillingBlock.cs" />
+    <Compile Include="Assets\03_Scripts\Blocks\ShieldBlock.cs" />
     <Compile Include="Assets\03_Scripts\BulletBehaviour.cs" />
     <Compile Include="Assets\03_Scripts\CameraFollow.cs" />
     <Compile Include="Assets\03_Scripts\Chunks\Chunk.cs" />
@@ -331,7 +334,6 @@
     <Compile Include="Assets\03_Scripts\DevDebug.cs" />
     <Compile Include="Assets\03_Scripts\GameManager.cs" />
     <Compile Include="Assets\03_Scripts\GUI_Manager.cs" />
-    <Compile Include="Assets\03_Scripts\KillingBlock.cs" />
     <Compile Include="Assets\03_Scripts\MonsterBehaviour.cs" />
     <Compile Include="Assets\03_Scripts\OutfitsRewards.cs" />
     <Compile Include="Assets\03_Scripts\OutfitsVisuals.cs" />

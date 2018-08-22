@@ -8,6 +8,8 @@ TagManager:
   - Bound
   - KillingBlock
   - DeathZone
+  - CoinBlock
+  - ShieldBlock
   layers:
   - Default
   - TransparentFX

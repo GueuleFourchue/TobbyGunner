@@ -381,6 +381,38 @@ public class PlayerController : MonoBehaviour
                 Death();
             }
         }
+        if (collision.transform.CompareTag("CoinBlock"))
+        {
+            if (invulnerability)
+            {
+                collision.transform.GetComponent<CoinBlock>().Destroy();
+
+                camera.DOKill();
+                camera.DOShakePosition(0.1f, 0.5f, 50, 95).OnComplete(() =>
+                {
+                    camera.transform.localPosition = Vector3.zero;
+                });
+
+            }
+        }
+        if (collision.transform.CompareTag("ShieldBlock"))
+        {
+            if (invulnerability)
+            {
+                collision.transform.GetComponent<ShieldBlock>().Destroy();
+
+                camera.DOKill();
+                camera.DOShakePosition(0.1f, 0.5f, 50, 95).OnComplete(() =>
+                {
+                    camera.transform.localPosition = Vector3.zero;
+                });
+
+                //Invu
+                YellowColor();
+                invulnerability = true;
+                UiShield.DecreaseFillValue();
+            }
+        }
     }
 
     public void Death()

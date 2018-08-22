@@ -274,3 +274,5 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
+1c31a9b7972ef0def1ed5d26f6457cde Assembly-CSharp.dll:.CoinBlock
+b439711d3f94016980bb547c17728bf9 Assembly-CSharp.dll:.ShieldBlock

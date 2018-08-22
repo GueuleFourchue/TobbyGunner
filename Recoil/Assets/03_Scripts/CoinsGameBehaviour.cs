@@ -17,8 +17,8 @@ public class CoinsGameBehaviour : MonoBehaviour {
 	void Awake ()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        StartCoroutine(FollowPlayer());
         rb = GetComponent<Rigidbody2D>();
+        StartCoroutine(FollowPlayer());
     }
 	
 	// Update is called once per frame
@@ -43,6 +43,9 @@ public class CoinsGameBehaviour : MonoBehaviour {
     IEnumerator FollowPlayer()
     { 
         Vector3 randomOriginDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0).normalized;
+
+        float randomSpreadForce = Random.Range(0.7f, 1.3f);
+        spreadForce *= randomSpreadForce;
         rb.AddForce(randomOriginDirection * spreadForce, ForceMode2D.Impulse);
         
         yield return new WaitForSeconds(0.5f);
