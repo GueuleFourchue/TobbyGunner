@@ -181,8 +181,7 @@ public class GameManager : MonoBehaviour {
         //Character
         character.GetComponent<Rigidbody2D>().gravityScale = originGravityScale;
         character.GetComponent<BoxCollider2D>().enabled = true;
-        playerController.invulnerability = true;
-        ui_Shield.DecreaseFillValue();
+        playerController.Invulnerability();
 
         //Activate Monsters
         var monsters = FindObjectsOfType<ContinueDeactivate>();

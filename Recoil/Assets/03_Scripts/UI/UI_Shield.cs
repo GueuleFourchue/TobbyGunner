@@ -6,25 +6,37 @@ using DG.Tweening;
 
 public class UI_Shield : MonoBehaviour {
 
-    public float invulnerabilityTimer;
     public bool decreaseFill;
 
     public Image fillImage;
     public Image shieldIcon;
 
+    Tween myTween;
 
-    public void DecreaseFillValue()
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+            DecreaseFillValue(1.5f);
+    }
+
+    public void DecreaseFillValue(float duration)
     {
         ActivateShieldSprite();
 
-        DOTween.To(() => fillImage.fillAmount, x => fillImage.fillAmount = x, 0, invulnerabilityTimer).OnComplete(() =>
+        //ResetValues
+        shieldIcon.DOKill();
+        myTween.Kill();
+        fillImage.fillAmount = 1;
+
+
+        myTween = DOTween.To(() => fillImage.fillAmount, x => fillImage.fillAmount = x, 0, duration).OnComplete(() =>
         {
             shieldIcon.DOFade(0, 0.2f).OnComplete(() =>
             {
                 fillImage.enabled = false;
                 shieldIcon.enabled = false;
                 fillImage.fillAmount = 1;
-
             });
         });
     }

@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     public float superShootRecoil;
     public float supershootRecoilDamage;
     public float invulnerabilityDuration;
+    public float superInvulnerabilityDuration;
     public UI_Shield UiShield;
 
     //[HideInInspector]
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
     bool shoot;
     bool superShoot;
     public bool invulnerability;
+    public bool superInvulnerability;
     bool charaInvertedSprite;
     bool gunInvertedSprite;
 
@@ -78,7 +80,6 @@ public class PlayerController : MonoBehaviour
     {
         gunScale = gunSprite.localScale;
         charaScale = charaSprite.localScale;
-        UiShield.invulnerabilityTimer = invulnerabilityDuration;
     }
 
     // Update is called once per frame
@@ -134,6 +135,20 @@ public class PlayerController : MonoBehaviour
                 charaSpriteRenderer.DOColor(new Color(1,1,1,1), 0.1f);
             }
         }
+
+        if (superInvulnerability)
+        {
+            invulnerabilityTimer += Time.deltaTime;
+            if (invulnerabilityTimer > superInvulnerabilityDuration)
+            {
+                invulnerabilityTimer = 0;
+                superInvulnerability = false;
+
+                //SpriteInvuColor
+                SpriteRenderer charaSpriteRenderer = charaSprite.GetComponent<SpriteRenderer>();
+                charaSpriteRenderer.DOColor(new Color(1, 1, 1, 1), 0.1f);
+            }
+        }
     }
 
     void FixedUpdate()
@@ -149,9 +164,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.AddForce(shootDirection * superShootRecoil, ForceMode2D.Impulse);
             superShoot = false;
-            invulnerability = true;
-
-            YellowColor();
         }
     }
 
@@ -211,7 +223,9 @@ public class PlayerController : MonoBehaviour
         gunAnimator.Play("Shoot");
         animator.Play("Supershoot");
 
-        UiShield.DecreaseFillValue();
+        Invulnerability();
+        
+
         CharaSpriteRotation();
         GunSpriteRotation();
         ShootAnim();
@@ -346,7 +360,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.transform.CompareTag("Monster"))
         {
-            if (invulnerability)
+            if (invulnerability || superInvulnerability)
             {
                 collision.transform.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position).normalized * 50, ForceMode2D.Impulse);
                 collision.transform.GetComponent<MonsterBehaviour>().TakesDamage(supershootRecoilDamage);
@@ -365,7 +379,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.transform.CompareTag("KillingBlock"))
         {
-            if (invulnerability)
+            if (invulnerability || superInvulnerability)
             {
                 collision.transform.GetComponent<KillingBlock>().Destroy();
 
@@ -383,7 +397,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.transform.CompareTag("CoinBlock"))
         {
-            if (invulnerability)
+            if (invulnerability || superInvulnerability)
             {
                 collision.transform.GetComponent<CoinBlock>().Destroy();
 
@@ -397,7 +411,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.transform.CompareTag("ShieldBlock"))
         {
-            if (invulnerability)
+            if (invulnerability || superInvulnerability)
             {
                 collision.transform.GetComponent<ShieldBlock>().Destroy();
 
@@ -407,10 +421,7 @@ public class PlayerController : MonoBehaviour
                     camera.transform.localPosition = Vector3.zero;
                 });
 
-                //Invu
-                YellowColor();
-                invulnerability = true;
-                UiShield.DecreaseFillValue();
+                SuperInvulnerability();
             }
         }
     }
@@ -427,6 +438,23 @@ public class PlayerController : MonoBehaviour
     {
         //SpriteInvuColor
         SpriteRenderer charaSpriteRenderer = charaSprite.GetComponent<SpriteRenderer>();
+        charaSpriteRenderer.color = Color.white;
+        charaSpriteRenderer.DOKill();
         charaSpriteRenderer.DOColor(new Color(charaSpriteRenderer.color.r, charaSpriteRenderer.color.g, 0.3f, charaSpriteRenderer.color.a), 0.1f);
+    }
+
+    public void Invulnerability()
+    {
+        invulnerabilityTimer = 0;
+        invulnerability = true;
+        YellowColor();
+        UiShield.DecreaseFillValue(invulnerabilityDuration);
+    }
+    public void SuperInvulnerability()
+    {
+        invulnerabilityTimer = 0;
+        superInvulnerability = true;
+        YellowColor();
+        UiShield.DecreaseFillValue(superInvulnerabilityDuration);
     }
 }
