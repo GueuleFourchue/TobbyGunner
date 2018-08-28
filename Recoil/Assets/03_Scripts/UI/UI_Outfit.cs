@@ -10,6 +10,9 @@ public class UI_Outfit : MonoBehaviour {
     public int price;
     public int unlockAtLevel;
 
+    [Header("Swipe")]
+    public UI_MenuSwipe ui_MenuSwipe;
+
     [Header ("Drag & Drop")]
     public Image outline;
     public Image character;
@@ -120,10 +123,13 @@ public class UI_Outfit : MonoBehaviour {
 
     public void ClickOutfitButton()
     {
-        if (isBought)
-            ChangeCostume();
-        else 
-            BuyPopUp();
+        if (!ui_MenuSwipe.isDraging)
+        {
+            if (isBought)
+                ChangeCostume();
+            else
+                BuyPopUp();
+        }
     }
 
     public void ChangeCostume()
