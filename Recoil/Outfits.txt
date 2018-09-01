@@ -1,15 +1,12 @@
 Heroes
-	IronMan
-	Buzz L'éclair
-	Indiana Jones
-	Dark Vador
-	Batman
-	Marty McFly
-	Jack Sparrow
-	Gandalf
-	Neo
-	Terminator
-	Rambo
+	6- Obiwan Kenobi
+	4- Indiana Jones
+	5- Doc Brown
+	8- Jack Sparrow
+	7- Gandalf
+	3- Terminator
+	1- Rambo
+	2- Joker
 	
 Celebrities
 	Freddie Mercury

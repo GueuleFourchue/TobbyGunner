@@ -70,6 +70,7 @@ public class UI_MenuSwipe : MonoBehaviour {
 
     void MoveContainer(float xPosition)
     {
+        Debug.Log("Move");
         xOffset = Input.mousePosition.x - originTouchPosition.x;
         container.position = new Vector3(xPosition + xOffset, container.position.y);
     }

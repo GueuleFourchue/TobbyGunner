@@ -18,11 +18,11 @@ public class UI_OutfitsSlider : MonoBehaviour {
     public void SetSlider()
     {
         float outfitsCount = playerData.unlockedOutfits.Count;
-        float fill = outfitsCount / 27f;
+        float fill = outfitsCount / 18f;
 
         DOTween.To(() => fillImage.fillAmount, x => fillImage.fillAmount = x, fill, 1);
         //fillImage.fillAmount = fill;
-        countText.text = outfitsCount + "/27";
+        countText.text = outfitsCount + "/18";
     }
 	
 }
