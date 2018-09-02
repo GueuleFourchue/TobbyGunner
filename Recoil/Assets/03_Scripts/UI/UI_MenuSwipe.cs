@@ -77,7 +77,7 @@ public class UI_MenuSwipe : MonoBehaviour {
     void ChangeContainer(float xPosition)
     {
         container.DOKill();
-        container.DOMoveX(xPosition, 0.1f);
+        container.DOMoveX(xPosition, 0.25f).SetEase(Ease.OutBack);
     }
 
 }

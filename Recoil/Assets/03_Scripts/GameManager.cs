@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
     public Image blackOverlay;
     public CameraFollow cameraFollow;
     public OutfitsRewards outfitsRewards;
+    public SpriteRenderer charaSprite;
+    public GameObject kingSparkles;
 
     [Header("Continue")]
     public PlayerController playerController;
@@ -39,8 +41,12 @@ public class GameManager : MonoBehaviour {
     {
         originGravityScale = character.GetComponent<Rigidbody2D>().gravityScale;
         beginPlayCoins = playerData.coins;
+        blackOverlay.DOFade(0, 0.2f);
         StartCoroutine(LoadGUI());
         LoadData();
+
+        if (playerData.equipedOutfit == "Outfit_King")
+            kingSparkles.SetActive(true);
     }
 	void LoadData()
     {
@@ -82,7 +88,8 @@ public class GameManager : MonoBehaviour {
         Scene s = SceneManager.GetSceneByName("GUI");
         GameObject[] guiObject = s.GetRootGameObjects();
         guiObject[0].SetActive(true);
-        
+        guiObject[1].SetActive(true);
+
         blackBackground.DOFade(1, 0.3f);
     }
 

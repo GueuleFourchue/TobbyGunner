@@ -38,7 +38,7 @@ public class UIAnimations : MonoBehaviour {
 
     public void RestartLevel()
     {
-        blackOverlayCanvas.DOFade(1, 0.1f).OnComplete(() =>
+        blackOverlayCanvas.DOFade(1, 0.3f).OnComplete(() =>
         {
             guiManager.Restart();
         });

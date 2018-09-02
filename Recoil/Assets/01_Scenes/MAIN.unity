@@ -3145,6 +3145,8 @@ MonoBehaviour:
   blackOverlay: {fileID: 2123994009}
   cameraFollow: {fileID: 1355858008}
   outfitsRewards: {fileID: 1173305986}
+  charaSprite: {fileID: 200705226}
+  kingSparkles: {fileID: 2007859569}
   playerController: {fileID: 442810616}
   deathZone: {fileID: 611772511}
   deathZoneMinPosition: {fileID: 1585265001}
@@ -10795,7 +10797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
