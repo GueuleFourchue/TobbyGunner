@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour {
 
-    public TextMesh textMesh;  
+    public TextMesh textMesh;
 
+    [Header ("CoinBlocks")]
+    public GameObject[] coinBlocks;
+    public float frequency;
+
+    private void Start()
+    {
+        float random = Random.Range(0f, 1f);
+        if (random <= frequency)
+        {
+            CoinBlocks();
+        }
+    }
 
     public void SetLevelText(int level)
     {
@@ -18,5 +30,10 @@ public class Chunk : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+    }
+
+    void CoinBlocks()
+    {
+        coinBlocks[Random.Range(0, coinBlocks.Length - 1)].SetActive(true);
     }
 }

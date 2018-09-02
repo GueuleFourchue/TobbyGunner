@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
             SuperShoot();
         }
 
-        if (invulnerability)
+        if (invulnerability && !superInvulnerability)
         {
             invulnerabilityTimer += Time.deltaTime;
             if (invulnerabilityTimer > invulnerabilityDuration)
@@ -147,6 +147,7 @@ public class PlayerController : MonoBehaviour
                 //SpriteInvuColor
                 SpriteRenderer charaSpriteRenderer = charaSprite.GetComponent<SpriteRenderer>();
                 charaSpriteRenderer.DOColor(new Color(1, 1, 1, 1), 0.1f);
+                
             }
         }
     }
