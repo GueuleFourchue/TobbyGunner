@@ -13,8 +13,10 @@ public class ChunksManager : MonoBehaviour {
     public DeathZone deathZone;
 
     [Header("Effects & UI")]
-    public BrightnessContrastGamma brightnessContrastGamma;
+    //public BrightnessContrastGamma brightnessContrastGamma;
     public UI_InGame ui_InGame;
+    public SpriteRenderer colorBackground;
+    float hueValue;
 
     [Header("Difficulty")]
     public int difficultyLevel = 1;
@@ -33,6 +35,7 @@ public class ChunksManager : MonoBehaviour {
 
     private void Start()
     {
+        hueValue = 0.6f;
         AddFirstChunks();
     }
 
@@ -90,9 +93,18 @@ public class ChunksManager : MonoBehaviour {
         //UpdateScoreUI
         ui_InGame.UpdateScore(actualLevelIndex);
 
+        /*
         //RedLevelUpEffect
         if (brightnessContrastGamma.ContrastCoeff.x > 0)
             brightnessContrastGamma.ContrastCoeff = new Vector3(brightnessContrastGamma.ContrastCoeff.x - 0.01f, brightnessContrastGamma.ContrastCoeff.y, brightnessContrastGamma.ContrastCoeff.z);
+        */
+
+        //Changing color
+        hueValue -= 0.02f;
+        colorBackground.color = Color.HSVToRGB(hueValue, 0.3f, 0.7f);
+        colorBackground.color = new Color(colorBackground.color.r, colorBackground.color.g, colorBackground.color.b, 0.7f);
+        
+
     }
 
     public void SaveBestLevel()

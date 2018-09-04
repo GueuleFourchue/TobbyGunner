@@ -236,6 +236,7 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 c5ebe2599d6f647cb0016711f8756c5f Assembly-CSharp.dll:Colorful.RGBSplit
 26e994521ac99d1b301272710dade767 Assembly-CSharp.dll:Colorful.PhotoFilter
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+179d5aea993084b07eead43cda6db7e4 Assembly-CSharp.dll:.QuitGame
 00566559aaf2ba51543e32371603951b Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndGrain
 fe586523851e92c839eb419afad35389 Assembly-CSharp.dll:Colorful.ChromaticAberration
 f266a453cd4bfbe81533762a3e3589f4 DOTween.dll:DG.Tweening.Core.DOTweenComponent
@@ -272,6 +273,7 @@ fe64526aa8568f7e2f55603504c56b3f Assembly-CSharp.dll:Colorful.Frost
 60beed254012a118f49480ab580af1cd Assembly-CSharp.dll:Colorful.ContrastGain
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.PostEffectsBase
 e2a8fd4524fc2a3a236b7e7720b544a6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.EdgeDetection
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LaunchScene
 ef4f341ea44a846a425e6789b837fd4b Assembly-CSharp.dll:Colorful.Vintage
 70f0c7e8f5b9c11bb3169b56292504ae Assembly-CSharp.dll:Colorful.ComicBook
 b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ColorCorrectionLookup
@@ -279,5 +281,3 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LaunchScene
-179d5aea993084b07eead43cda6db7e4 Assembly-CSharp.dll:.QuitGame
