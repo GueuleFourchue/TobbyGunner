@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Advertisements;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public PlayerData playerData;
     public Canvas canvasInGame;
@@ -30,14 +32,21 @@ public class GameManager : MonoBehaviour {
     float originGravityScale;
 
     bool hasProposedContinue;
+    public bool HasProposedContinue
+    {
+        get
+        {
+            return hasProposedContinue;
+        }
+    }
     bool slowMotion;
     int beginPlayCoins;
 
 
 
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         originGravityScale = character.GetComponent<Rigidbody2D>().gravityScale;
         beginPlayCoins = playerData.coins;
@@ -48,7 +57,7 @@ public class GameManager : MonoBehaviour {
         if (playerData.equipedOutfit == "Outfit_King")
             kingSparkles.SetActive(true);
     }
-	void LoadData()
+    void LoadData()
     {
         playerData.coins = PlayerPrefs.GetInt("Coins");
         playerData.bestLevel = PlayerPrefs.GetInt("BestLevel");
@@ -68,8 +77,7 @@ public class GameManager : MonoBehaviour {
         animator.enabled = true;
         animator.Play("Death");
 
-
-        if (!hasProposedContinue)
+        if (Advertisement.IsReady("rewardedVideo") && !hasProposedContinue)
             StartCoroutine(ContinuePopUp());
         else
             StartCoroutine(DelayOutfitsReward(0.5f));
@@ -144,7 +152,7 @@ public class GameManager : MonoBehaviour {
 
         //Monsters in Standby during timer
         var monsters = FindObjectsOfType<ContinueDeactivate>();
-        foreach(ContinueDeactivate script in monsters)
+        foreach (ContinueDeactivate script in monsters)
         {
             script.TimerStandby();
         }
@@ -160,13 +168,13 @@ public class GameManager : MonoBehaviour {
         character.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         character.GetComponent<Rigidbody2D>().gravityScale = 0;
         cameraFollow.enabled = true;
-        
+
         //Invu
         playerController.YellowColor();
         ui_Shield.ActivateShieldSprite();
 
         //Reset Big Monster
-        deathZone.position = new Vector3(0,deathZoneMinPosition.position.y,0);
+        deathZone.position = new Vector3(0, deathZoneMinPosition.position.y, 0);
 
         //LaunchTimer
         continueResumeTimer.enabled = true;
