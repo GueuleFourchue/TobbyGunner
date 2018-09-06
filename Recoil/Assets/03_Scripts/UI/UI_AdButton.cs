@@ -24,7 +24,6 @@ public class UI_AdButton : MonoBehaviour
         adOption.resultCallback = (ShowResult res) =>
         {
             count++;
-            Debug.Log(count);
             Time.timeScale = 1;
             if (res == ShowResult.Finished)
             {
