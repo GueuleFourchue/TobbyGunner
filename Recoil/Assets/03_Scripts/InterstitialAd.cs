@@ -40,7 +40,7 @@ public class InterstitialAd : MonoBehaviour
         for (int i = index - 1; i >= 0; i--)
         {
             text.text = texts[i];
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.7f);
         }
 
         ShowOptions adOption = new ShowOptions();
