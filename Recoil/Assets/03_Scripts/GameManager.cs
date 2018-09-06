@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public Colorful.Grayscale grayscale;
     Vector3 characterDeathPosition;
     float originGravityScale;
+    public System.Action OnLevelEnd;
 
     bool hasProposedContinue;
     public bool HasProposedContinue
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        OnLevelEnd += () => { };
         originGravityScale = character.GetComponent<Rigidbody2D>().gravityScale;
         beginPlayCoins = playerData.coins;
         blackOverlay.DOFade(0, 0.2f);
@@ -91,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator EndLevel()
     {
+        OnLevelEnd();
         yield return new WaitForSeconds(0.5f);
 
         Scene s = SceneManager.GetSceneByName("GUI");
