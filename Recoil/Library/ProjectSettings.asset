@@ -664,12 +664,16 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 0a66dfe2-8f59-4a3c-bb59-610c43db20fc
-  projectName: Recoil
-  organizationId: loic-bourdrel
+  cloudProjectId: ae6e9850-425f-4ce7-903a-b77e01b1a002
+  projectName: Bobby Gunner
+  organizationId: ironequal23085
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

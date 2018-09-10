@@ -16,6 +16,7 @@ public class UIAnimations : MonoBehaviour {
 
     public CanvasGroup Canvas_Menu;
     public CanvasGroup Canvas_Outfits;
+    public CanvasGroup Canvas_Premium;
 
     public Text coinsText;
 	
@@ -55,11 +56,21 @@ public class UIAnimations : MonoBehaviour {
         });
     }
 
-    public void MainWindow()
+    public void PremiumWindow()
     {
-        Canvas_Outfits.DOFade(0, 0.4f).OnComplete(() =>
+        Canvas_Menu.DOFade(0, 0.4f).OnComplete(() =>
         {
-            Canvas_Outfits.gameObject.SetActive(false);
+            Canvas_Menu.gameObject.SetActive(false);
+            Canvas_Premium.gameObject.SetActive(true);
+            Canvas_Premium.DOFade(1, 0.3f);
+        });
+    }
+
+    public void MainWindow(CanvasGroup canvasGroup)
+    {
+        canvasGroup.DOFade(0, 0.4f).OnComplete(() =>
+        {
+            canvasGroup.gameObject.SetActive(false);
             Canvas_Menu.gameObject.SetActive(true);
             Canvas_Menu.DOFade(1, 0.3f);
         });
