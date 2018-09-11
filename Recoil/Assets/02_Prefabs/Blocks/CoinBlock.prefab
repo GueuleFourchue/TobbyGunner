@@ -161,8 +161,8 @@ MonoBehaviour:
   deathParticlePrefab: {fileID: 1711817016613336, guid: 3acd6c34e4945df46bf3206eb265227e,
     type: 2}
   coinPrefab: {fileID: 1197351061751520, guid: 608650153ca9c3645833db280039c812, type: 2}
-  coinsAverageSpawnNumber: 20
-  coinsRandomValue: 2
+  coinsAverageSpawnNumber: 30
+  coinsRandomValue: 5
 --- !u!212 &212205129923820934
 SpriteRenderer:
   m_ObjectHideFlags: 1

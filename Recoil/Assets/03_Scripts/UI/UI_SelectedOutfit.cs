@@ -14,6 +14,9 @@ public class UI_SelectedOutfit : MonoBehaviour {
     public Image lightStar2;
     public PlayerData playerData;
 
+    public Transform jobsParent;
+    public Transform heroesParent;
+
     [HideInInspector]
     public Image currentOutfitOutline;
 
@@ -27,12 +30,22 @@ public class UI_SelectedOutfit : MonoBehaviour {
 
     void SetSelectedOutfitOutline()
     {
-        foreach(Transform t in this.transform)
+        foreach(Transform t in jobsParent)
         {
             if (PlayerPrefs.GetString("EquipedOutfit") == t.name)
             { 
                 t.GetComponent<Image>().color = selectedOutfitOutlineColor;
                 currentOutfitOutline = t.GetComponent<Image>();
+                StartSetPreviewOutfit(t);
+            }
+        }
+        foreach (Transform t in heroesParent)
+        {
+            if (PlayerPrefs.GetString("EquipedOutfit") == t.name)
+            {
+                t.GetComponent<Image>().color = selectedOutfitOutlineColor;
+                currentOutfitOutline = t.GetComponent<Image>();
+                Debug.Log(currentOutfitOutline);
                 StartSetPreviewOutfit(t);
             }
         }

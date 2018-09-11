@@ -7258,6 +7258,8 @@ MonoBehaviour:
   lightStar1: {fileID: 1908255429}
   lightStar2: {fileID: 1878657520}
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
+  jobsParent: {fileID: 1743698999}
+  heroesParent: {fileID: 846608523}
   currentOutfitOutline: {fileID: 0}
 --- !u!224 &691895506
 RectTransform:
