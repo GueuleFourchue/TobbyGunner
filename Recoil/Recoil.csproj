@@ -321,6 +321,7 @@
     <Compile Include="Assets\03_Scripts\Blocks\KillingBlock.cs" />
     <Compile Include="Assets\03_Scripts\Blocks\ShieldBlock.cs" />
     <Compile Include="Assets\03_Scripts\BulletBehaviour.cs" />
+    <Compile Include="Assets\03_Scripts\BuyPremium.cs" />
     <Compile Include="Assets\03_Scripts\CameraFollow.cs" />
     <Compile Include="Assets\03_Scripts\Chunks\Chunk.cs" />
     <Compile Include="Assets\03_Scripts\Chunks\ChunksManager.cs" />

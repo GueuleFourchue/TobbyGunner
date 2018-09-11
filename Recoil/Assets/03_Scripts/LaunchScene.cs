@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LaunchScene : MonoBehaviour {
 
+    public PlayerData playerData;
+
 	void Start ()
     {
+        if (PlayerPrefs.HasKey("PremiumUser"))
+            playerData.premiumUser = true;
+
         StartCoroutine(LoadGUI());
     }
 

@@ -33,10 +33,12 @@ public class UI_Outfit : MonoBehaviour {
     public GameObject canBuy;
     public GameObject cantBuyScore;
     public GameObject cantBuyCoins;
+    public GameObject cantBuyPremium;
     public Text cantBuyText;
 
     public bool isBought;
     public bool isUnlocked;
+    public bool premiumOutfit;
 
 	void Start ()
     {
@@ -44,10 +46,12 @@ public class UI_Outfit : MonoBehaviour {
             CostumeBought();
         if (PlayerPrefs.GetInt("BestLevel") >= unlockAtLevel)
             CostumeUnlocked();
+        if (premiumOutfit && playerData.premiumUser)
+            CostumeUnlocked();
         priceText.text = price.ToString();
     }
 
-    void CostumeUnlocked()
+    public void CostumeUnlocked()
     {
         padlock.SetActive(false);
         character.enabled = true;
@@ -150,6 +154,7 @@ public class UI_Outfit : MonoBehaviour {
             canBuy.SetActive(true);
             cantBuyScore.SetActive(false);
             cantBuyCoins.SetActive(false);
+            cantBuyPremium.SetActive(false);
 
             ui_BuyPopUpButton.ui_Outfit = this;
             //Text
@@ -163,14 +168,22 @@ public class UI_Outfit : MonoBehaviour {
             if (isUnlocked)
             {
                 cantBuyScore.SetActive(false);
+                cantBuyPremium.SetActive(false);
                 cantBuyCoins.SetActive(true);
             }
-            else
+            else if (!premiumOutfit)
             {
                 cantBuyText.text = unlockAtLevel.ToString();
                 cantBuyScore.SetActive(true);
+                cantBuyPremium.SetActive(false);
                 cantBuyCoins.SetActive(false);
-            }         
+            }
+            else
+            {
+                cantBuyPremium.SetActive(true);
+                cantBuyCoins.SetActive(false);
+                cantBuyScore.SetActive(false);
+            }
         }
     }
 

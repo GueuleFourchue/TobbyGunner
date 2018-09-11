@@ -75,4 +75,15 @@ public class UIAnimations : MonoBehaviour {
             Canvas_Menu.DOFade(1, 0.3f);
         });
     }
+
+    public void OutfitToPremiumWindow()
+    {
+        Canvas_Outfits.DOFade(0, 0.4f).OnComplete(() =>
+        {
+            Canvas_Outfits.gameObject.SetActive(false);
+            Canvas_Premium.gameObject.SetActive(true);
+            Canvas_Premium.DOFade(1, 0.3f);
+        });
+
+    }
 }

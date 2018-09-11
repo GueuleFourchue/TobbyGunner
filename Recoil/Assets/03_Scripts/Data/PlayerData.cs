@@ -8,5 +8,6 @@ public class PlayerData : ScriptableObject {
     public int coins;
     public int bestLevel;
     public string equipedOutfit;
+    public bool premiumUser;
     public List<string> unlockedOutfits = new List<string>();
 }
