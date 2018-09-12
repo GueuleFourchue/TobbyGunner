@@ -25,7 +25,6 @@ public class InterstitialAd : MonoBehaviour
 
     void OnLevelEnd()
     {
-        Debug.Log(gamePlayed);
         gamePlayed++;
         PlayerPrefs.SetInt("gamePlayed", gamePlayed);
         index = texts.Length;
