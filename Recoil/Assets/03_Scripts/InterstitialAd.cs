@@ -29,7 +29,7 @@ public class InterstitialAd : MonoBehaviour
         PlayerPrefs.SetInt("gamePlayed", gamePlayed);
         index = texts.Length;
 
-        if (gamePlayed % Mathf.Max(Mathf.Round(100 / gamePlayed), 3) == 0 && Advertisement.IsReady())
+        if (gamePlayed % Mathf.Max(Mathf.Round(100 / gamePlayed), 3) == 0 && Advertisement.IsReady() && PlayerPrefs.GetInt("premium") != 1111)
             StartCoroutine(ShowInterstitialAd());
     }
 
