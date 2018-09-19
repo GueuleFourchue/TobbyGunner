@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Colorful;
+using System.Linq;
 
 public class ChunksManager : MonoBehaviour {
 
@@ -29,9 +30,10 @@ public class ChunksManager : MonoBehaviour {
     public GameObject[] chunks_3;
     public GameObject[] chunks_4;
     public GameObject[] chunks_5;
-    public GameObject[] chunks_6;
+    int currentChunckIndex;
+    int random;
+    public List<GameObject> chunks = new List<GameObject>();
 
-    
 
     private void Start()
     {
@@ -41,7 +43,9 @@ public class ChunksManager : MonoBehaviour {
 
     void AddFirstChunks()
     {
-        GameObject.Instantiate(chunks_1[Random.Range(0, chunks_1.Length)], Vector3.zero, Quaternion.identity);
+        random = Random.Range(0, chunks_1.Length);
+        GameObject.Instantiate(chunks_1[random], Vector3.zero, Quaternion.identity);
+        currentChunckIndex = random;
     }
 
     public void AddChunk()
@@ -62,28 +66,38 @@ public class ChunksManager : MonoBehaviour {
 
         if (difficultyLevel == 1)
         {
-            newChunk = GameObject.Instantiate(chunks_1[Random.Range(0, chunks_1.Length)], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
+            chunks = chunks_1.ToList();
+            chunks.RemoveAt(currentChunckIndex);
+            random = Random.Range(0, chunks.Capacity - 1);
         }
         if (difficultyLevel == 2)
         {
-            newChunk = GameObject.Instantiate(chunks_2[Random.Range(0, chunks_2.Length)], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
+            chunks = chunks_2.ToList();
+            chunks.RemoveAt(currentChunckIndex);
+            random = Random.Range(0, chunks.Capacity - 1);
         }
         if (difficultyLevel == 3)
         {
-            newChunk = GameObject.Instantiate(chunks_3[Random.Range(0, chunks_3.Length)], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);;
+            chunks = chunks_3.ToList();
+            chunks.RemoveAt(currentChunckIndex);
+            random = Random.Range(0, chunks.Capacity - 1);
         }
         if (difficultyLevel == 4)
         {
-            newChunk = GameObject.Instantiate(chunks_4[Random.Range(0, chunks_4.Length)], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
+            chunks = chunks_4.ToList();
+            chunks.RemoveAt(currentChunckIndex);
+            random = Random.Range(0, chunks.Capacity - 1);
         }
         if (difficultyLevel == 5)
         {
-            newChunk = GameObject.Instantiate(chunks_5[Random.Range(0, chunks_5.Length)], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
+            chunks = chunks_5.ToList();
+            chunks.RemoveAt(currentChunckIndex);
+            random = Random.Range(0, chunks.Capacity - 1);
         }
-        if (difficultyLevel == 6)
-        {
-            newChunk = GameObject.Instantiate(chunks_6[Random.Range(0, chunks_6.Length)], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
-        }
+
+        //Instantiate
+        newChunk = GameObject.Instantiate(chunks[random], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
+        currentChunckIndex = random;
 
         //LevelUp
         nexLevelIndex += 1;
