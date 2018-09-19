@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
     public float superInvulnerabilityDuration;
     public UI_Shield UiShield;
 
+    [Header("Bounds")]
+    public float boundXPosition;
+
     //[HideInInspector]
     public List<Transform> shootTargets;
 
@@ -85,6 +88,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x < -boundXPosition)
+        {
+            transform.position = new Vector3(-boundXPosition, transform.position.y, transform.position.z);
+        }
+        if (transform.position.x > boundXPosition)
+        {
+            transform.position = new Vector3(boundXPosition, transform.position.y, transform.position.z);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
