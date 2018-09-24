@@ -32,7 +32,7 @@ public class ChunksManager : MonoBehaviour {
     public GameObject[] chunks_5;
     int currentChunckIndex;
     int random;
-    public List<GameObject> chunks = new List<GameObject>();
+    List<GameObject> chunks = new List<GameObject>();
 
 
     private void Start()
@@ -107,11 +107,6 @@ public class ChunksManager : MonoBehaviour {
         //UpdateScoreUI
         ui_InGame.UpdateScore(actualLevelIndex);
 
-        /*
-        //RedLevelUpEffect
-        if (brightnessContrastGamma.ContrastCoeff.x > 0)
-            brightnessContrastGamma.ContrastCoeff = new Vector3(brightnessContrastGamma.ContrastCoeff.x - 0.01f, brightnessContrastGamma.ContrastCoeff.y, brightnessContrastGamma.ContrastCoeff.z);
-        */
 
         //Changing color
         hueValue -= 0.02f;
