@@ -15,8 +15,6 @@ public class UI_PremiumWindow : MonoBehaviour {
 	
     public void CheckPremium()
     {
-        Debug.Log("c ici");
-
         if (PlayerPrefs.HasKey("PremiumUser"))
         {
             isPremium.SetActive(true);
