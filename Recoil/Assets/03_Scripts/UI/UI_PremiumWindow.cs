@@ -10,6 +10,13 @@ public class UI_PremiumWindow : MonoBehaviour {
 
     void Start ()
     {
+        CheckPremium();
+    }
+	
+    public void CheckPremium()
+    {
+        Debug.Log("c ici");
+
         if (PlayerPrefs.HasKey("PremiumUser"))
         {
             isPremium.SetActive(true);
@@ -20,6 +27,5 @@ public class UI_PremiumWindow : MonoBehaviour {
             isntPremium.SetActive(true);
             isPremium.SetActive(false);
         }
-	}
-	
+    }
 }
