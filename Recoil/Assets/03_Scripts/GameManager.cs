@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         animator.enabled = true;
         animator.Play("Death");
 
-        if (Advertisement.IsReady("rewardedVideo") && !hasProposedContinue && PlayerPrefs.GetInt("BestLevel") * .7f < playerData.bestLevel)
+        if (Advertisement.IsReady("rewardedVideo") && !hasProposedContinue && GetComponent<ChunksManager>().actualLevelIndex > PlayerPrefs.GetInt("BestLevel") * .7f)
             StartCoroutine(ContinuePopUp());
         else
             StartCoroutine(DelayOutfitsReward(0.5f));
