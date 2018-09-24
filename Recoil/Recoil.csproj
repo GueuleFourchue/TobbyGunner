@@ -393,6 +393,7 @@
     <Compile Include="Assets\03_Scripts\UI\UI_MenuSwipe.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_Outfit.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_OutfitsSlider.cs" />
+    <Compile Include="Assets\03_Scripts\UI\UI_PremiumWindow.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_SelectedOutfit.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_Shield.cs" />
     <Compile Include="Assets\03_Scripts\UI\UIAnimations.cs" />

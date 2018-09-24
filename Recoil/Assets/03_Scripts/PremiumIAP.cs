@@ -5,6 +5,8 @@ using UnityEngine.Purchasing;
 
 public class PremiumIAP : MonoBehaviour
 {
+    public BuyPremium buyPremium;
+
     // Use this for initialization
     public void OnPurchaseComplete(Product product)
     {
@@ -16,6 +18,7 @@ public class PremiumIAP : MonoBehaviour
                 case "premium":
                     Debug.Log("bought");
                     PlayerPrefs.SetInt("premium", 1111);
+                    buyPremium.BecomePremium();
                     break;
             }
         }
