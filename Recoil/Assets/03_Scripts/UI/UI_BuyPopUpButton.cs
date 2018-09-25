@@ -9,6 +9,6 @@ public class UI_BuyPopUpButton : MonoBehaviour
 
     public void BuyCostume()
     {
-        // ui_Outfit.BuyCostume();
+        ui_Outfit.BuyCostume();
     }
 }

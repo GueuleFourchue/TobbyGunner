@@ -109,8 +109,10 @@ public class ChunksManager : MonoBehaviour {
 
 
         //Changing color
-        hueValue -= 0.02f;
-        colorBackground.color = Color.HSVToRGB(hueValue, 0.3f, 0.7f);
+        if (hueValue > -0.13f)
+            hueValue -= 0.02f;
+
+        colorBackground.color = Color.HSVToRGB(hueValue, 0.45f, 0.7f);
         colorBackground.color = new Color(colorBackground.color.r, colorBackground.color.g, colorBackground.color.b, 0.7f);
         
 

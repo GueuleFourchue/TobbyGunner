@@ -24,6 +24,7 @@ public class OutfitsRewards : MonoBehaviour {
     public Image blackOverlay;
 
     bool displayPopUp;
+    Vector3 lockerPosition;
 
     private void Start()
     {
@@ -35,17 +36,8 @@ public class OutfitsRewards : MonoBehaviour {
             }
         }
 
-        /*
-        for (int i = 0; i < unlockLevels.Length; i++)
-        {
-            if (unlockLevels[i] <= playerData.bestLevel)
-            {
-                isUnlocked[i] = true;
-                PlayerPrefs.SetInt("IsUnlockedIndex" + i, 1);
-                StartCoroutine(OutfitReward(i));
-            }
-        }
-        */
+        lockerPosition = locked.transform.localPosition;
+        
     }
 
     public void CheckUnlockedOutfit()
@@ -75,7 +67,6 @@ public class OutfitsRewards : MonoBehaviour {
         nameText.text = outfits[index].ToString().Replace("S_Outfit_", "").ToUpper();
         characterImage.sprite = outfits[index];
 
-        Vector3 lockerPosition = locked.transform.localPosition;
         locked.transform.DOShakePosition(1, 30, 90, 90);
 
         yield return new WaitForSeconds(1f);
