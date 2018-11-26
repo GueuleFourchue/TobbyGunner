@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Colorful;
 using System.Linq;
+using DG.Tweening;
 
 public class ChunksManager : MonoBehaviour {
 
@@ -34,11 +35,13 @@ public class ChunksManager : MonoBehaviour {
     int random;
     List<GameObject> chunks = new List<GameObject>();
 
+    AudioSource music;
 
     private void Start()
     {
         hueValue = 0.6f;
         AddFirstChunks();
+        music = GameObject.Find("SoundsManager").GetComponent<AudioSource>();
     }
 
     void AddFirstChunks()
@@ -114,8 +117,9 @@ public class ChunksManager : MonoBehaviour {
 
         colorBackground.color = Color.HSVToRGB(hueValue, 0.45f, 0.7f);
         colorBackground.color = new Color(colorBackground.color.r, colorBackground.color.g, colorBackground.color.b, 0.7f);
-        
 
+        if(actualLevelIndex > 5)
+            DOTween.To(() => music.pitch, x => music.pitch = x, music.pitch += 0.01f, 1f);
     }
 
     public void SaveBestLevel()

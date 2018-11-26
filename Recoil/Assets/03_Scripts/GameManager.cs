@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.Advertisements;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
-
+    public AudioMixer musicAudioMixer;
     public PlayerData playerData;
     public Canvas canvasInGame;
     public CanvasGroup blackBackground;
@@ -49,6 +50,8 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        musicAudioMixer.DOSetFloat("LowpassFrequency", 22000f, 3f);
+
         OnLevelEnd += () => { };
         originGravityScale = character.GetComponent<Rigidbody2D>().gravityScale;
         beginPlayCoins = playerData.coins;
@@ -93,6 +96,8 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator EndLevel()
     {
+        musicAudioMixer.DOSetFloat("LowpassFrequency", 4000f, 1.5f);
+
         OnLevelEnd();
         yield return new WaitForSeconds(0.5f);
 

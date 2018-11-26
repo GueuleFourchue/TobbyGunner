@@ -3816,6 +3816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca07272c897a434d8fbbe70400c6c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicAudioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
   playerData: {fileID: 11400000, guid: fe8b85722b8bf944681c7f872b96f2eb, type: 2}
   canvasInGame: {fileID: 1369804692}
   blackBackground: {fileID: 1126482622}

@@ -326,6 +326,7 @@
     <Compile Include="Assets\03_Scripts\PremiumIAP.cs" />
     <Compile Include="Assets\03_Scripts\QuitGame.cs" />
     <Compile Include="Assets\03_Scripts\ShootTarget.cs" />
+    <Compile Include="Assets\03_Scripts\Sounds\SoundsManager.cs" />
     <Compile Include="Assets\03_Scripts\Tp.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_AdButton.cs" />
     <Compile Include="Assets\03_Scripts\UI\UI_BuyPopUpButton.cs" />

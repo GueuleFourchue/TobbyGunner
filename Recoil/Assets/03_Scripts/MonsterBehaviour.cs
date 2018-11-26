@@ -25,10 +25,12 @@ public class MonsterBehaviour : MonoBehaviour {
     bool isGoingRight;
     bool canChangeDirection  = true;
 
+    SoundsManager soundsManager;
 
-	void Start ()
+    void Start ()
     {
         monsterScale = monsterSprite.transform.localScale;
+        soundsManager = GameObject.Find("SoundsManager").GetComponent<SoundsManager>();
     }
 	
 	void Update ()
@@ -58,6 +60,7 @@ public class MonsterBehaviour : MonoBehaviour {
         PlayerController playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerController.shootTargets.Remove(this.transform);
         //
+        soundsManager.PlaySound("MonsterExplosion");
 
         yield return new WaitForSeconds(0.08f);
 

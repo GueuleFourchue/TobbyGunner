@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
     public Camera camera;
     public Rigidbody2D rb;
 
@@ -77,12 +76,14 @@ public class PlayerController : MonoBehaviour
     float SlomoDurationTimer;
 
     float invulnerabilityTimer;
-    
+
+    SoundsManager soundsManager;
 
     void Start()
     {
         gunScale = gunSprite.localScale;
         charaScale = charaSprite.localScale;
+        soundsManager = GameObject.Find("SoundsManager").GetComponent<SoundsManager>();
     }
 
     // Update is called once per frame
@@ -183,6 +184,8 @@ public class PlayerController : MonoBehaviour
     void Shoot()
     {
         shootPosition = camera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+
+        soundsManager.PlaySound("Shoot");
 
         if (shootTargets.Count != 0)
         {
@@ -441,6 +444,9 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
+        AudioSource music = soundsManager.gameObject.GetComponent<AudioSource>();
+        DOTween.To(() => music.pitch, x => music.pitch = x, 1, 1);
+
         chunksManager.SaveBestLevel();
         gameManager.SaveData();
         gameManager.CharacterDeath(this.transform, GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
