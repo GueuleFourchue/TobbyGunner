@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public ChunksManager chunksManager;
     public GameObject dottedLine;
+    public CanvasGroup invuVignette;
 
     [Header("CameraEffects")]
     public Colorful.SmartSaturation saturationEffect;
@@ -404,7 +405,7 @@ public class PlayerController : MonoBehaviour
                 {
                     camera.transform.localPosition = Vector3.zero;
                 });
-                    
+                soundsManager.PlaySound("BlockBreak");
             }
             else
             {
@@ -422,7 +423,7 @@ public class PlayerController : MonoBehaviour
                 {
                     camera.transform.localPosition = Vector3.zero;
                 });
-
+                soundsManager.PlaySound("BlockCoinsBreak");
             }
         }
         if (collision.transform.CompareTag("ShieldBlock"))
@@ -436,7 +437,7 @@ public class PlayerController : MonoBehaviour
                 {
                     camera.transform.localPosition = Vector3.zero;
                 });
-
+                soundsManager.PlaySound("BlockInvuBreak");
                 SuperInvulnerability();
             }
         }
@@ -444,9 +445,6 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        AudioSource music = soundsManager.gameObject.GetComponent<AudioSource>();
-        DOTween.To(() => music.pitch, x => music.pitch = x, 1, 1);
-
         chunksManager.SaveBestLevel();
         gameManager.SaveData();
         gameManager.CharacterDeath(this.transform, GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
@@ -468,6 +466,14 @@ public class PlayerController : MonoBehaviour
         invulnerability = true;
         YellowColor();
         UiShield.DecreaseFillValue(invulnerabilityDuration);
+       
+        //Invu Vignette
+        invuVignette.alpha = 1;
+        invuVignette.DOKill();
+        invuVignette.DOFade(0.5f, invulnerabilityDuration).OnComplete(() =>
+        {
+            invuVignette.DOFade(0f, 1);
+        });
     }
     public void SuperInvulnerability()
     {
@@ -475,5 +481,13 @@ public class PlayerController : MonoBehaviour
         superInvulnerability = true;
         YellowColor();
         UiShield.DecreaseFillValue(superInvulnerabilityDuration);
+        
+        //Invu Vignette
+        invuVignette.alpha = 1;
+        invuVignette.DOKill();
+        invuVignette.DOFade(0.5f, superInvulnerabilityDuration).OnComplete(() =>
+        {
+            invuVignette.DOFade(0f, 1);
+        });
     }
 }

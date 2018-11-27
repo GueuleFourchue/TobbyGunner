@@ -205,7 +205,7 @@ ae4a11bfcf55389fa05744b618518c26 Assembly-CSharp.dll:Colorful.BilateralGaussianB
 7a2a7fdacd95347d8cf641ad7659bd08 Assembly-CSharp.dll:Colorful.DynamicLookup
 7b9ff7c28c88f94c4c24423377a183f0 Assembly-CSharp.dll:Colorful.ChannelClamper
 f5d561eb229accbca273a224fd78db8a Assembly-CSharp.dll:Colorful.ChannelMixer
-10a6f330ef384ec97743a27d91aa64b2 Assembly-CSharp.dll:.PlayerController
+9b0553ba538b93881d476c3cab11199a Assembly-CSharp.dll:.PlayerController
 cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenOverlay
 6070ce609cec20204fd24ce65bed207d Assembly-CSharp.dll:.CoinsGameBehaviour
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Invulnerability
@@ -283,6 +283,7 @@ e97813c0b08ce105b847236b1e11df36 Assembly-CSharp.dll:Colorful.Grayscale
 2f264043a6bb59ca3369df5a4d180e17 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.CameraMotionBlur
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 429f68ff2565e81fe0e47f29e89b26ee Assembly-CSharp.dll:Colorful.HueSaturationValue
+dee9e261b50273896b63c197bb7a5e62 Assembly-CSharp.dll:.SoundsManager
 05524b8f659e7bfe5756d1335fec24ba UDP.dll:UnityEngine.UDP.MainThreadDispatcher
 73670e8dd3253cd301f14a2425cd0de3 Assembly-CSharp.dll:.DeathZone
 cd34be3801e47918b177b8048ec62992 Assembly-CSharp.dll:Colorful.Levels
@@ -309,4 +310,4 @@ f8977df16cd71390d1d248f470d5bee1 Assembly-CSharp.dll:Colorful.Kuwahara
 708ee32a628608c54367af7d6b0606e7 Assembly-CSharp.dll:.BulletBehaviour
 b259062b9f4efaf3729fdb12112bff2f Assembly-CSharp.dll:Colorful.BrightnessContrastGamma
 8159363767c8f67409b50fbc4e1f1264 Assembly-CSharp-firstpass.dll:.IAPDemo
-61f0c923470772035c5f472c1ccaa932 Assembly-CSharp.dll:.SoundsManager
+bbf3b93c2ec493f19740c6ab756345f1 Assembly-CSharp.dll:.ClipsHolder

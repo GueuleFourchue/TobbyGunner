@@ -117,9 +117,6 @@ public class ChunksManager : MonoBehaviour {
 
         colorBackground.color = Color.HSVToRGB(hueValue, 0.45f, 0.7f);
         colorBackground.color = new Color(colorBackground.color.r, colorBackground.color.g, colorBackground.color.b, 0.7f);
-
-        if(actualLevelIndex > 5)
-            DOTween.To(() => music.pitch, x => music.pitch = x, music.pitch += 0.01f, 1f);
     }
 
     public void SaveBestLevel()
