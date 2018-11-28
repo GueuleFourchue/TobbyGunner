@@ -35,13 +35,10 @@ public class ChunksManager : MonoBehaviour {
     int random;
     List<GameObject> chunks = new List<GameObject>();
 
-    AudioSource music;
-
     private void Start()
     {
         hueValue = 0.6f;
         AddFirstChunks();
-        music = GameObject.Find("SoundsManager").GetComponent<AudioSource>();
     }
 
     void AddFirstChunks()
@@ -109,7 +106,6 @@ public class ChunksManager : MonoBehaviour {
 
         //UpdateScoreUI
         ui_InGame.UpdateScore(actualLevelIndex);
-
 
         //Changing color
         if (hueValue > -0.13f)

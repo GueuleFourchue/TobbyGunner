@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
@@ -79,12 +80,13 @@ public class PlayerController : MonoBehaviour
     float invulnerabilityTimer;
 
     SoundsManager soundsManager;
+    public AudioMixer audioMixer;
 
     void Start()
     {
         gunScale = gunSprite.localScale;
         charaScale = charaSprite.localScale;
-        soundsManager = GameObject.Find("SoundsManager").GetComponent<SoundsManager>();
+        soundsManager = GameObject.FindObjectOfType<SoundsManager>();
     }
 
     // Update is called once per frame
@@ -320,7 +322,15 @@ public class PlayerController : MonoBehaviour
 
     void SlowMotion()
     {
-        isSlomo = true;
+        if (!isSlomo)
+        {
+            isSlomo = true;
+            AudioSource audioSource = soundsManager.gameObject.GetComponent<AudioSource>();
+            audioSource.DOKill();
+            audioSource.DOPitch(1.05f, slomoDuration).SetEase(Ease.InExpo);
+            audioMixer.DOKill();
+            audioMixer.DOSetFloat("LowpassFrequency", 3000f, 0.15f);
+        }
         Time.timeScale = Mathf.Lerp(Time.timeScale, slomoValue, slomoLerp);
         Time.fixedDeltaTime = 0.02F * Time.timeScale;
 
@@ -351,6 +361,12 @@ public class PlayerController : MonoBehaviour
 
     void EndSlowMotion()
     {
+        AudioSource audioSource = soundsManager.gameObject.GetComponent<AudioSource>();
+        audioSource.DOKill();
+        audioSource.DOPitch(1f, 0.3f);
+        audioMixer.DOKill();
+        audioMixer.DOSetFloat("LowpassFrequency", 22000f, 0.2f);
+        soundsManager.PlaySound("SuperShoot"); 
         GetComponent<BoxCollider2D>().enabled = true;
 
         Time.timeScale = 1f;

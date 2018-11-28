@@ -15,6 +15,8 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: 04f7ccad24f1049499f7cc1d45db35d9
+    name: MusicVolume
   - guid: efb4e053840c3b247aa4ef5108a1eb10
     name: LowpassFrequency
   m_AudioMixerGroupViews:
@@ -67,14 +69,14 @@ AudioMixerSnapshotController:
   m_SnapshotID: c05cab15063c9cd4dbe1f48a128acc6a
   m_FloatValues:
     fc1f0741dc2b16142a7f74e7ad496db2: 0
-    d61270917db4b104cb4c9d49c9af7fdb: -1467
+    d61270917db4b104cb4c9d49c9af7fdb: -1893
     efb4e053840c3b247aa4ef5108a1eb10: 4000
     643cff35579e5d243a71f0f22b30a7d7: 2.76
     984b13293cac4da4686f001b2bcf9d85: 296
     4756dc7aa2bceab44a68609fa7d0ab37: 0
     56b5d3da49ad1f844bf5ff0c9903ba0d: 0.5
     54f04c8d4992de74ea936d1d40a5ae2a: 0.0086
-    04f7ccad24f1049499f7cc1d45db35d9: 3.2656894
+    04f7ccad24f1049499f7cc1d45db35d9: -10
     63864ced3d32eac43b7948b957fd5e5e: -10000
   m_TransitionOverrides: {}
 --- !u!243 &243494700547977770
