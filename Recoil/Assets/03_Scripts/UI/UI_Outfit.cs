@@ -85,7 +85,15 @@ public class UI_Outfit : MonoBehaviour {
             PlayerPrefs.SetInt("Coins", playerData.coins);
             coinsText.text = playerData.coins.ToString();
 
-            Scene s = SceneManager.GetSceneByName("MAIN");
+            Scene s;
+            if (SceneManager.GetSceneByName("MAIN").isLoaded)
+            {
+                s = SceneManager.GetSceneByName("MAIN");
+            }
+            else
+            {
+                s = SceneManager.GetSceneByName("LAUNCH");
+            }
             GameObject[] mainObjects = s.GetRootGameObjects();
             foreach(GameObject go in mainObjects)
             {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   coins: 0
-  bestLevel: 1
+  bestLevel: 0
   equipedOutfit: Outfit_Office
   premiumUser: 0
   unlockedOutfits:
