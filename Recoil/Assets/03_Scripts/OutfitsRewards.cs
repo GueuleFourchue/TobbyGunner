@@ -26,8 +26,11 @@ public class OutfitsRewards : MonoBehaviour {
     bool displayPopUp;
     Vector3 lockerPosition;
 
+    SoundsManager soundsManager;
+
     private void Start()
     {
+        soundsManager = GameObject.FindObjectOfType<SoundsManager>();
         for (int i = 0; i < unlockLevels.Length; i++)
         {
             if (PlayerPrefs.HasKey("IsUnlockedIndex" + i))
@@ -60,6 +63,8 @@ public class OutfitsRewards : MonoBehaviour {
     IEnumerator OutfitReward(int index)
     {
         yield return new WaitForSeconds(0.5f);
+
+        soundsManager.PlaySound("UnlockOutfit");
 
         outfitsRewardsCanvas.gameObject.SetActive(true);
         outfitsRewardsCanvas.DOFade(1f, 0.2f);

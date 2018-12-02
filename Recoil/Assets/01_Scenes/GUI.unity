@@ -595,6 +595,7 @@ MonoBehaviour:
   isBought: 1
   isUnlocked: 1
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!224 &57765849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2289,6 +2290,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &184060763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3792,6 +3794,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 1
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &315840753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6249,6 +6252,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &494106722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6980,6 +6984,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &562449182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11998,6 +12003,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &963963440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14386,6 +14392,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1199203517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14657,6 +14664,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1210803842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15572,6 +15580,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1293186276}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 155137629}
+        m_MethodName: BuyButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16802,6 +16821,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1373928120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19132,6 +19152,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1542434076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19689,6 +19710,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1578730638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22711,6 +22733,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1771756301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22982,6 +23005,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1773660083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23801,6 +23825,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1863602544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25278,6 +25303,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1925139820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26016,6 +26042,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1971454976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26742,6 +26769,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &1989205883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28689,6 +28717,7 @@ MonoBehaviour:
   isBought: 0
   isUnlocked: 0
   premiumOutfit: 0
+  audioMixer: {fileID: 24100000, guid: ca06606fb4bf0bf4ebfb8d4e2f453742, type: 2}
 --- !u!114 &2129492375
 MonoBehaviour:
   m_ObjectHideFlags: 0

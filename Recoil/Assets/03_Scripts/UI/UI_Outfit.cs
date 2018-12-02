@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UI_Outfit : MonoBehaviour {
 
@@ -39,6 +40,9 @@ public class UI_Outfit : MonoBehaviour {
     public bool isBought;
     public bool isUnlocked;
     public bool premiumOutfit;
+
+    [Header("Audio")]
+    public AudioMixer audioMixer;
 
     SoundsManager soundsManager;
 
@@ -108,7 +112,8 @@ public class UI_Outfit : MonoBehaviour {
 
             isBought = true;
 
-            soundsManager.PlaySound("BuyNewOutfit");
+            //Sound
+            StartCoroutine(BuyJingle());
 
             button.GetComponent<CanvasGroup>().DOFade(0, 0.2f).OnComplete(() =>
             {
@@ -209,4 +214,11 @@ public class UI_Outfit : MonoBehaviour {
         });
     }
 
+    IEnumerator BuyJingle()
+    {
+        audioMixer.DOSetFloat("MusicVolume", -30, 0.5f);
+        soundsManager.PlaySound("BuyNewOutfit");
+        yield return new WaitForSeconds(2.5f);
+        audioMixer.DOSetFloat("MusicVolume", -5, 1f);
+    }
 }
