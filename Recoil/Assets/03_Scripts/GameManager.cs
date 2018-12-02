@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator EndLevel()
     {
         audioMixer.DOSetFloat("LowpassFrequency", 4000f, 1.5f);
-        audioMixer.DOSetFloat("MusicVolume", -10, 1.5f);
+        audioMixer.DOSetFloat("MusicVolume", -5, 1.5f);
 
         OnLevelEnd();
         yield return new WaitForSeconds(0.5f);

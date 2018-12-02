@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 5d4f82ab9e7202049ac4cc8cc6e535c4, type: 3}
+  - {fileID: 8300000, guid: 8d214a227b250e94caac77307776eeda, type: 3}
 --- !u!4 &608441422
 Transform:
   m_ObjectHideFlags: 0
@@ -967,6 +967,11 @@ MonoBehaviour:
   - name: BuyButton
     clipsHolder: {fileID: 608441421}
     volume: 0.5
+    minPitch: 0.95
+    maxPitch: 1.05
+  - name: BuyNewOutfit
+    clipsHolder: {fileID: 1210728098}
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
 --- !u!4 &662023583
@@ -988,6 +993,7 @@ Transform:
   - {fileID: 1655748584}
   - {fileID: 1083802775}
   - {fileID: 608441422}
+  - {fileID: 1210728099}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1758,6 +1764,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1210728097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1210728099}
+  - component: {fileID: 1210728098}
+  m_Layer: 0
+  m_Name: BuyNewOutfit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1210728098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210728097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a411aff08c7d01844bc5f5c6cf6c2478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 26d6f2705e195bd4b9573a1b9b1781af, type: 3}
+--- !u!4 &1210728099
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210728097}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 662023583}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237827858
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,8 @@ public class UI_Outfit : MonoBehaviour {
     public bool isUnlocked;
     public bool premiumOutfit;
 
+    SoundsManager soundsManager;
+
 	void Start ()
     {
         if (PlayerPrefs.HasKey(this.gameObject.name))
@@ -49,6 +51,7 @@ public class UI_Outfit : MonoBehaviour {
         if (premiumOutfit && playerData.premiumUser)
             CostumeUnlocked();
         priceText.text = price.ToString();
+        soundsManager = GameObject.FindObjectOfType<SoundsManager>();
     }
 
     public void CostumeUnlocked()
@@ -104,6 +107,8 @@ public class UI_Outfit : MonoBehaviour {
             }
 
             isBought = true;
+
+            soundsManager.PlaySound("BuyNewOutfit");
 
             button.GetComponent<CanvasGroup>().DOFade(0, 0.2f).OnComplete(() =>
             {

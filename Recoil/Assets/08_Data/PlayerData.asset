@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145e6580a9be8424dbcc9a3fa1e0f973, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  coins: 0
-  bestLevel: 0
-  equipedOutfit: Outfit_Office
+  coins: 4
+  bestLevel: 1
+  equipedOutfit: Outfit_Military
   premiumUser: 0
   unlockedOutfits:
   - Outfit_Office
+  - Outfit_Military
