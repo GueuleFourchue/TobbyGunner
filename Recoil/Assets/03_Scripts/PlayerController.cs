@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
     float SlomoDurationTimer;
 
     float invulnerabilityTimer;
+    float cameraSize;
 
     SoundsManager soundsManager;
     public AudioMixer audioMixer;
@@ -87,6 +88,7 @@ public class PlayerController : MonoBehaviour
         gunScale = gunSprite.localScale;
         charaScale = charaSprite.localScale;
         soundsManager = GameObject.FindObjectOfType<SoundsManager>();
+        cameraSize = camera.orthographicSize;
     }
 
     // Update is called once per frame
@@ -357,6 +359,8 @@ public class PlayerController : MonoBehaviour
         if (constrastVignette.enabled == false)
             constrastVignette.enabled = true;
         constrastVignette.Darkness = Mathf.Lerp(constrastVignette.Darkness, 30f, slomoLerp);
+
+        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, 14.5f, slomoLerp);
     }
 
     void EndSlowMotion()
@@ -386,6 +390,8 @@ public class PlayerController : MonoBehaviour
         //motionBlur.enabled = false;
         vignette.enabled = false;
         constrastVignette.enabled = false;
+        camera.DOKill();
+        camera.DOOrthoSize(cameraSize, 0.2f);
         //UIAnims.SlomoIconAnimOff();
     }
 
