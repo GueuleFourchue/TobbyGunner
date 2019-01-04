@@ -12,6 +12,7 @@ public class UI_InGame : MonoBehaviour {
 
     private void Start()
     {
+        playerData.coins = PlayerPrefs.GetInt("Coins");
         UpdateCoins();
     }
 

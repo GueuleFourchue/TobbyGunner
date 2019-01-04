@@ -7,9 +7,12 @@ public class SoundsManager : MonoBehaviour {
 
     public AudioMixerGroup SFX_mixer;
 
+    AudioSource audioSource;
+
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
+        CheckIfAlreadyExists();
     }
 
     // Represents an inventory slot containing some count of some item.
@@ -34,7 +37,7 @@ public class SoundsManager : MonoBehaviour {
             if (slots[i].name == name)
             {
                 AudioClip clip = slots[i].clipsHolder.clips[Random.Range(0, slots[i].clipsHolder.clips.Length)];
-                AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource = gameObject.AddComponent<AudioSource>();
                 audioSource.clip = clip;
                 audioSource.outputAudioMixerGroup = SFX_mixer;
                 audioSource.volume = slots[i].volume;
@@ -42,6 +45,24 @@ public class SoundsManager : MonoBehaviour {
                 audioSource.Play();
                 Destroy(audioSource, clip.length);
             }
+        }
+    }
+    public void StopLastSound()
+    {
+        audioSource.volume = 0;
+    }
+
+    void CheckIfAlreadyExists()
+    {
+        List<SoundsManager> list = new List<SoundsManager>();
+        foreach(SoundsManager manager in GameObject.FindObjectsOfType<SoundsManager>())
+        {
+            list.Add(manager);
+        }
+        if(list.Count != 1)
+        {
+            Destroy(list[1].gameObject);
+            list.RemoveAt(1);
         }
     }
 }

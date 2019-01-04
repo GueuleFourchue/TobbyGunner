@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public UnityStandardAssets.ImageEffects.MotionBlur motionBlur;
     public UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration vignette;
     public Colorful.ContrastVignette constrastVignette;
-
+    public UnityStandardAssets.ImageEffects.BlurOptimized blur;
 
     [Header("Shoot")]
     public GameObject bulletPrefab;
@@ -327,11 +327,9 @@ public class PlayerController : MonoBehaviour
         if (!isSlomo)
         {
             isSlomo = true;
-            AudioSource audioSource = soundsManager.gameObject.GetComponent<AudioSource>();
-            audioSource.DOKill();
-            audioSource.DOPitch(1.05f, slomoDuration).SetEase(Ease.InExpo);
             audioMixer.DOKill();
             audioMixer.DOSetFloat("LowpassFrequency", 3000f, 0.15f);
+            soundsManager.PlaySound("SlowMotion");
         }
         Time.timeScale = Mathf.Lerp(Time.timeScale, slomoValue, slomoLerp);
         Time.fixedDeltaTime = 0.02F * Time.timeScale;
@@ -365,11 +363,9 @@ public class PlayerController : MonoBehaviour
 
     void EndSlowMotion()
     {
-        AudioSource audioSource = soundsManager.gameObject.GetComponent<AudioSource>();
-        audioSource.DOKill();
-        audioSource.DOPitch(1f, 0.3f);
         audioMixer.DOKill();
         audioMixer.DOSetFloat("LowpassFrequency", 22000f, 0.2f);
+        soundsManager.StopLastSound();
         soundsManager.PlaySound("SuperShoot"); 
         GetComponent<BoxCollider2D>().enabled = true;
 
@@ -470,6 +466,10 @@ public class PlayerController : MonoBehaviour
         chunksManager.SaveBestLevel();
         gameManager.SaveData();
         gameManager.CharacterDeath(this.transform, GetComponent<BoxCollider2D>(), rb, animator, shootRecoil);
+        soundsManager.PlaySound("Death");
+        //Effect
+        blur.enabled = true;
+        DOTween.To(() => blur.blurSize, x => blur.blurSize = x, 7,0.8f);
         this.enabled = false;
     }
 

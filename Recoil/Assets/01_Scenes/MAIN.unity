@@ -1252,6 +1252,7 @@ GameObject:
   - component: {fileID: 402466263}
   - component: {fileID: 402466265}
   - component: {fileID: 402466264}
+  - component: {fileID: 402466266}
   m_Layer: 0
   m_Name: Locked Image
   m_TagString: Untagged
@@ -1310,6 +1311,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402466262}
+--- !u!95 &402466266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402466262}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ccaa196e9155517409a50c4b31cd40b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &442810612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1442,7 @@ MonoBehaviour:
   motionBlur: {fileID: 2009946134}
   vignette: {fileID: 2009946135}
   constrastVignette: {fileID: 2009946137}
+  blur: {fileID: 2009946138}
   bulletPrefab: {fileID: 1903743082423736, guid: 9bdbfe064ccfdfd45a6ea78b4d084d44,
     type: 2}
   bulletsHolder: {fileID: 1107990087}
@@ -2028,6 +2047,8 @@ GameObject:
   - component: {fileID: 611772510}
   - component: {fileID: 611772509}
   - component: {fileID: 611772508}
+  - component: {fileID: 611772512}
+  - component: {fileID: 611772513}
   m_Layer: 0
   m_Name: DeahtZone
   m_TagString: DeathZone
@@ -2102,6 +2123,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &611772512
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611772507}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243511134030028272, guid: ca06606fb4bf0bf4ebfb8d4e2f453742,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: bee17bbc92f8019408f0127489e74269, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &611772513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611772507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965ea6f10c54ba24e981ca721968cb47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1355858007}
+  audioSource: {fileID: 611772512}
 --- !u!1 &616271365
 GameObject:
   m_ObjectHideFlags: 0
@@ -10904,6 +11019,7 @@ GameObject:
   - component: {fileID: 2009946130}
   - component: {fileID: 2009946137}
   - component: {fileID: 2009946129}
+  - component: {fileID: 2009946138}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11142,6 +11258,22 @@ MonoBehaviour:
   Contrast: 0
   ContrastCoeff: {x: 1, y: 0, z: 0}
   EdgeBlending: 0
+--- !u!114 &2009946138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009946124}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc6bde01469c7b4badee5362f191d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  downsample: 1
+  blurSize: 0
+  blurIterations: 2
+  blurType: 0
+  blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
 --- !u!1 &2042428859
 GameObject:
   m_ObjectHideFlags: 0

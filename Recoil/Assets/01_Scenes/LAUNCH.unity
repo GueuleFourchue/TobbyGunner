@@ -184,8 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 195a52e320dec6d4eafa4bdbf32763c9, type: 3}
-  - {fileID: 8300000, guid: e802eda1ca5c40f4491d7793c84f0f7f, type: 3}
-  - {fileID: 8300000, guid: 26ff0d016eb3bac4e957069ffe582c24, type: 3}
+  - {fileID: 8300000, guid: e20dce013f6cdee449638ee99f04e4d8, type: 3}
+  - {fileID: 8300000, guid: db958f4aad1e2c6449812ef20cd4b48f, type: 3}
+  - {fileID: 8300000, guid: 668a2229974cad44195696c49d7a67f8, type: 3}
+  - {fileID: 8300000, guid: ad07d20c0c15a094c9308344700d72c0, type: 3}
 --- !u!4 &50045594
 Transform:
   m_ObjectHideFlags: 0
@@ -509,6 +511,94 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &381303507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 381303509}
+  - component: {fileID: 381303508}
+  m_Layer: 0
+  m_Name: Death
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &381303508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381303507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a411aff08c7d01844bc5f5c6cf6c2478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 62364dfed6d58f74fa775f43dded79b4, type: 3}
+  - {fileID: 8300000, guid: 9912af7796b495845ab24997aa66aec9, type: 3}
+  - {fileID: 8300000, guid: 8ab2b94da56c0d14eaee996e3b1c3f0d, type: 3}
+  - {fileID: 8300000, guid: 0a1a0311acff0a74cabda79d98451c7d, type: 3}
+  - {fileID: 8300000, guid: f09a87812ea6b05428749aa23281e207, type: 3}
+--- !u!4 &381303509
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381303507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 662023583}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &414227226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 414227228}
+  - component: {fileID: 414227227}
+  m_Layer: 0
+  m_Name: SlowMotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &414227227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414227226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a411aff08c7d01844bc5f5c6cf6c2478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: f888f26ed168f7b489fded8baba450ea, type: 3}
+--- !u!4 &414227228
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414227226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 662023583}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472164376
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +1069,21 @@ MonoBehaviour:
     volume: 0.7
     minPitch: 1
     maxPitch: 1
+  - name: Death
+    clipsHolder: {fileID: 381303508}
+    volume: 0.7
+    minPitch: 1
+    maxPitch: 1
+  - name: SuperShoot
+    clipsHolder: {fileID: 590974457}
+    volume: 0.4
+    minPitch: 0.9
+    maxPitch: 1.05
+  - name: SlowMotion
+    clipsHolder: {fileID: 414227227}
+    volume: 0.65
+    minPitch: 1
+    maxPitch: 1
 --- !u!4 &662023583
 Transform:
   m_ObjectHideFlags: 0
@@ -1000,6 +1105,8 @@ Transform:
   - {fileID: 608441422}
   - {fileID: 1210728099}
   - {fileID: 1617816699}
+  - {fileID: 381303509}
+  - {fileID: 414227228}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1013,7 +1120,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243494700547977770, guid: ca06606fb4bf0bf4ebfb8d4e2f453742,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8bfb7863cc362e541b27a085bf754639, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c9a55485910185540a4587fa5bc8ced1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1

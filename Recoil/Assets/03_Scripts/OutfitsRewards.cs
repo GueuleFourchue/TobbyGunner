@@ -72,7 +72,8 @@ public class OutfitsRewards : MonoBehaviour {
         nameText.text = outfits[index].ToString().Replace("S_Outfit_", "").ToUpper();
         characterImage.sprite = outfits[index];
 
-        locked.transform.DOShakePosition(1, 30, 90, 90);
+        //locked.transform.DOShakeScale(1, 0.4f, 90, 90);
+        locked.gameObject.GetComponent<Animator>().enabled = true;
 
         yield return new WaitForSeconds(1f);
 
