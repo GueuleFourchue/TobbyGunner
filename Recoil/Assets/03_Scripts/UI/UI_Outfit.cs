@@ -11,6 +11,8 @@ public class UI_Outfit : MonoBehaviour {
     public int price;
     public int unlockAtLevel;
 
+    Text unlockLevelText;
+
     [Header("Swipe")]
     public UI_MenuSwipe ui_MenuSwipe;
 
@@ -48,6 +50,12 @@ public class UI_Outfit : MonoBehaviour {
 
 	void Start ()
     {
+        if (transform.Find("Locked").GetComponentInChildren<Text>() != null)
+        {
+            unlockLevelText = transform.Find("Locked").GetComponentInChildren<Text>();
+            unlockLevelText.text = "" + unlockAtLevel;
+        }
+
         if (PlayerPrefs.HasKey(this.gameObject.name))
             CostumeBought();
         if (PlayerPrefs.GetInt("BestLevel") >= unlockAtLevel)

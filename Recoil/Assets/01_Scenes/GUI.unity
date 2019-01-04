@@ -2265,8 +2265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 15
-  unlockAtLevel: 0
+  price: 100
+  unlockAtLevel: 4
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 184060763}
   character: {fileID: 2009605319}
@@ -3769,7 +3769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  price: 500
   unlockAtLevel: 10000
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 315840753}
@@ -6227,8 +6227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 5
+  price: 2500
+  unlockAtLevel: 45
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 494106722}
   character: {fileID: 1303972061}
@@ -6959,8 +6959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 3
+  price: 800
+  unlockAtLevel: 24
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 562449182}
   character: {fileID: 1425545600}
@@ -12000,8 +12000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 1
+  price: 250
+  unlockAtLevel: 10
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 963963440}
   character: {fileID: 41214326}
@@ -14389,8 +14389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 4
+  price: 1500
+  unlockAtLevel: 31
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 1199203517}
   character: {fileID: 1479782275}
@@ -14661,8 +14661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 5
+  price: 2500
+  unlockAtLevel: 50
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 1210803842}
   character: {fileID: 1909752807}
@@ -16818,8 +16818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 3
+  price: 800
+  unlockAtLevel: 27
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 1373928120}
   character: {fileID: 1924078739}
@@ -19149,8 +19149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 2
+  price: 500
+  unlockAtLevel: 18
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 1542434076}
   character: {fileID: 664418426}
@@ -19707,8 +19707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 1
+  price: 250
+  unlockAtLevel: 8
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 1578730638}
   character: {fileID: 635044097}
@@ -22730,8 +22730,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 0
+  price: 100
+  unlockAtLevel: 2
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 1771756301}
   character: {fileID: 418941844}
@@ -23002,8 +23002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 2
+  price: 500
+  unlockAtLevel: 15
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 1773660083}
   character: {fileID: 2047593403}
@@ -23822,8 +23822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 2
+  price: 500
+  unlockAtLevel: 12
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 1863602544}
   character: {fileID: 1879923789}
@@ -25300,8 +25300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 4
+  price: 1500
+  unlockAtLevel: 40
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 1925139820}
   character: {fileID: 1696876393}
@@ -26039,8 +26039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 1
+  price: 250
+  unlockAtLevel: 6
   ui_MenuSwipe: {fileID: 1743699000}
   outline: {fileID: 1971454976}
   character: {fileID: 1589700135}
@@ -26766,8 +26766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 3
+  price: 800
+  unlockAtLevel: 21
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 1989205883}
   character: {fileID: 827683214}
@@ -28714,8 +28714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7561d58497f65345a3d4313c58d97aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  unlockAtLevel: 4
+  price: 1500
+  unlockAtLevel: 35
   ui_MenuSwipe: {fileID: 846608524}
   outline: {fileID: 2129492375}
   character: {fileID: 1607301146}

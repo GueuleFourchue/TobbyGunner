@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     Vector3 characterDeathPosition;
     float originGravityScale;
     public System.Action OnLevelEnd;
+    public UnityStandardAssets.ImageEffects.BlurOptimized blur;
 
     bool hasProposedContinue;
     public bool HasProposedContinue
@@ -192,6 +193,7 @@ public class GameManager : MonoBehaviour
         playerController.enabled = false;
 
         //ImageEffects
+        blur.enabled = false;
         grayscale.enabled = true;
         grayscale.Amount = 0.5f;
         DOTween.To(() => grayscale.Amount, x => grayscale.Amount = x, 0f, 2.5f).OnComplete(() =>

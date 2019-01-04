@@ -54,7 +54,6 @@ public class ChunksManager : MonoBehaviour {
 
         GameObject newChunk = null;
 
-        
         //DifficultyUp
         foreach (int i in difficultyLevelThresholds)
         {
@@ -97,6 +96,7 @@ public class ChunksManager : MonoBehaviour {
 
         //Instantiate
         newChunk = GameObject.Instantiate(chunks[random], new Vector3(0, (nexLevelIndex - 1) * levelHeight, 0), Quaternion.identity);
+        newChunk.SetActive(true);
         currentChunckIndex = random;
 
         //LevelUp
