@@ -1026,7 +1026,7 @@ MonoBehaviour:
     maxPitch: 1.1
   - name: MonsterExplosion
     clipsHolder: {fileID: 50045593}
-    volume: 0.15
+    volume: 0.3
     minPitch: 0.95
     maxPitch: 1.05
   - name: BlockBreak

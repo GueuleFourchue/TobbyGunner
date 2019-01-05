@@ -13,12 +13,13 @@ public class MonsterGrowlSound : MonoBehaviour {
 
     private void Update()
     {
+        /*
         offset = camera.transform.position.y - transform.position.y;
         if (Mathf.Abs(offset) > 20 && audioSource.volume!=0 && !isDecreasing)
         {
+            audioSource.volume = audioSource.volume - (offset / 20);
             isDecreasing = true;
-            audioSource.DOKill();
-            audioSource.DOFade(0, 2);
+            Debug.Log(audioSource.volume);
         }
         else
         {
@@ -26,6 +27,26 @@ public class MonsterGrowlSound : MonoBehaviour {
                 audioSource.volume = 1.1f - (offset / 20);
             else
                 audioSource.volume = 1;
+            isDecreasing = false;
+        }
+        */
+
+        offset = Mathf.Abs(camera.transform.position.y - transform.position.y);
+        if (offset>20 && audioSource.volume != 0)
+        {
+            audioSource.volume = 0;
+        }
+        if (offset < 20)
+        {
+            if (offset < 10)
+            {
+                audioSource.volume = 1 - (offset / 30);
+            }
+            else
+            {
+                audioSource.volume = 1 - (offset / 20);
+            }
+            
         }
     }
 }
