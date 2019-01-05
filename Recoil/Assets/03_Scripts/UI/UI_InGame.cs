@@ -19,6 +19,11 @@ public class UI_InGame : MonoBehaviour {
     public void UpdateCoins()
     {
         coinsText.text = "" + playerData.coins;
+        coinsText.DOKill();
+        DOTween.To(() => coinsText.fontSize, x => coinsText.fontSize = x, 40, 0.1f).OnComplete(() =>
+        {
+            DOTween.To(() => coinsText.fontSize, x => coinsText.fontSize = x, 30, 0.1f);
+        });
     }
 
     public void UpdateScore(int level)
