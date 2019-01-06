@@ -22,12 +22,6 @@ public class GUI_Manager : MonoBehaviour
         StartCoroutine(LaunchMenu());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     IEnumerator LaunchMenu()
     {
         globalCanvasGroup.alpha = 1;
@@ -40,6 +34,10 @@ public class GUI_Manager : MonoBehaviour
     public void Restart()
     {
         GUI_Holder.SetActive(false);
-        SceneManager.LoadScene("Main");
+        if (PlayerPrefs.GetInt("gamePlayed") == 0)
+            SceneManager.LoadScene("TUTO");
+        else
+            SceneManager.LoadScene("MAIN");
+
     }
 }
