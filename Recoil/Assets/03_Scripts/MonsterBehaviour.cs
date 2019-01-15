@@ -11,6 +11,7 @@ public class MonsterBehaviour : MonoBehaviour {
     public SpriteRenderer monsterSprite;
     public SpriteRenderer targetFeedbackSprite;
     public GameObject coinPrefab;
+    Rigidbody2D rb;
 
     [Header("Coins")]
     public int coinsAverageSpawnNumber;
@@ -60,11 +61,15 @@ public class MonsterBehaviour : MonoBehaviour {
         PlayerController playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerController.shootTargets.Remove(this.transform);
         //
-        soundsManager.PlaySound("MonsterExplosion");
 
-        yield return new WaitForSeconds(0.08f);
-
+        
+        yield return new WaitForSeconds(0.07f);
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector3.zero;
         GetComponent<CircleCollider2D>().enabled = false;
+        yield return new WaitForSeconds(0.07f);
+
+        soundsManager.PlaySound("MonsterExplosion");
         GameObject particle = GameObject.Instantiate(deathParticlePrefab);
         particle.transform.position = transform.position;
 

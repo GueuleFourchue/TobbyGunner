@@ -203,6 +203,7 @@ MonoBehaviour:
   monsterSprite: {fileID: 212649300946303076}
   targetFeedbackSprite: {fileID: 212320333402573548}
   coinPrefab: {fileID: 1197351061751520, guid: 608650153ca9c3645833db280039c812, type: 2}
+  rb: {fileID: 50423847152820062}
   coinsAverageSpawnNumber: 5
   coinsRandomValue: 1
   rayTransform: {fileID: 4760936356839722}
@@ -220,7 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333ccc484e903a3418122908f1ae1139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterBehaviour: {fileID: 114033488815988810}
   deathZone: {fileID: 0}
 --- !u!212 &212320333402573548
 SpriteRenderer:
