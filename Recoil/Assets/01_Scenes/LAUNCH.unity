@@ -1021,7 +1021,7 @@ MonoBehaviour:
   slots:
   - name: Shoot
     clipsHolder: {fileID: 579915293}
-    volume: 0.4
+    volume: 0.5
     minPitch: 0.9
     maxPitch: 1.1
   - name: MonsterExplosion
@@ -1076,7 +1076,7 @@ MonoBehaviour:
     maxPitch: 1
   - name: SuperShoot
     clipsHolder: {fileID: 590974457}
-    volume: 0.4
+    volume: 0.55
     minPitch: 0.9
     maxPitch: 1.05
   - name: SlowMotion
