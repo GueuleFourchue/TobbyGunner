@@ -14,7 +14,7 @@ public class UI_Outfit : MonoBehaviour {
     Text unlockLevelText;
 
     [Header("Swipe")]
-    public UI_MenuSwipe ui_MenuSwipe;
+    public UI_OutfitsContainer uI_OutfitsContainer;
 
     [Header ("Drag & Drop")]
     public Image outline;
@@ -153,7 +153,7 @@ public class UI_Outfit : MonoBehaviour {
 
     public void ClickOutfitButton()
     {
-        if (!ui_MenuSwipe.isDraging)
+        if (!uI_OutfitsContainer.isDraging)
         {
             if (isBought)
                 ChangeCostume();
